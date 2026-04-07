@@ -1,0 +1,73 @@
+syntax = "proto3";
+
+package chat.pb;
+
+import "common.proto";
+
+// 会话类型
+enum SessionType {
+    SESSION_UNKNOWN = 0;
+    SESSION_SINGLE = 1; // 单聊
+    SESSION_GROUP = 2;  // 群聊
+}
+
+// 消息类型
+enum MsgType {
+    MSG_UNKNOWN = 0;
+    MSG_TEXT = 1;       // 文本消息
+    MSG_IMAGE = 2;      // 图片消息
+    MSG_VOICE = 3;      // 语音消息
+    MSG_VIDEO = 4;      // 视频消息
+    MSG_FILE = 5;       // 文件消息
+    MSG_LOCATION = 6;   // 位置消息
+    MSG_SYSTEM = 99;    // 系统消息 (如：撤回、邀请入群等)
+}
+
+// 聊天消息实体
+message ChatMsg {
+    string msg_id = 1;              // 全局唯一消息 ID (如 Snowflake ID / UUID)
+    uint64 sender_id = 2;           // 发送者 ID
+    uint64 receiver_id = 3;         // 接收者 ID (单聊时为对方 userId，群聊时为 groupId)
+    SessionType session_type = 4;   // 单聊/群聊
+    MsgType msg_type = 5;           // 消息内容类型
+    bytes content = 6;              // 消息内容 (可根据 MsgType 解析为对应结构体)
+    int64 send_time = 7;            // 客户端发送时间戳
+    int64 server_time = 8;          // 服务端接收时间戳
+    string seq_id = 9;              // 用于消息排序、去重的序列号
+}
+
+// 发送消息请求 (Client -> Logic)
+message SendMsgReq {
+    ChatMsg msg_info = 1;
+}
+
+// 发送消息响应 (Logic -> Client)
+message SendMsgResp {
+    BaseResponse base = 1;
+    string msg_id = 2;              // 返回服务端生成的最终消息ID
+    int64 server_time = 3;
+    string seq_id = 4;              // 服务端分配的序列号
+}
+
+// 接收消息通知 (Logic/Push -> Client)
+message PushMsgNotify {
+    repeated ChatMsg msg_list = 1;
+}
+
+// 消息 ACK (Client -> Logic) - 确保消息已读或已送达
+message MsgAckReq {
+    uint64 user_id = 1;
+    string session_id = 2;          // 会话 ID
+    string last_msg_id = 3;         // 最后一条处理的消息 ID
+    string last_seq_id = 4;         // 最后一条处理的序列号
+}
+
+message MsgAckResp {
+    BaseResponse base = 1;
+}
+
+// 逻辑层 ChatService
+service ChatService {
+    rpc SendMsg(SendMsgReq) returns (SendMsgResp);
+    rpc MsgAck(MsgAckReq) returns (MsgAckResp);
+}

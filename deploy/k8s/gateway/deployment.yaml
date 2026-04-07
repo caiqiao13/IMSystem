@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: chat-system
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-gateway
+  namespace: chat-system
+spec:
+  replicas: 3 # 网关通常需要高可用和水平扩展
+  selector:
+    matchLabels:
+      app: chat-gateway
+  template:
+    metadata:
+      labels:
+        app: chat-gateway
+    spec:
+      containers:
+      - name: gateway
+        image: registry.example.com/chat/gateway:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 9000
+          name: tcp-long
+        - containerPort: 8080
+          name: http-api
+        resources:
+          requests:
+            cpu: "500m"
+            memory: "512Mi"
+          limits:
+            cpu: "2"
+            memory: "2Gi"
+        env:
+        - name: REDIS_HOST
+          value: "chat-redis"
+        - name: RABBITMQ_HOST
+          value: "chat-rabbitmq"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-gateway-svc
+  namespace: chat-system
+spec:
+  type: LoadBalancer # 或者 NodePort / ClusterIP 配合 Ingress
+  selector:
+    app: chat-gateway
+  ports:
+    - name: tcp
+      protocol: TCP
+      port: 9000
+      targetPort: 9000
+    - name: http
+      protocol: TCP
+      port: 8080
+      targetPort: 8080

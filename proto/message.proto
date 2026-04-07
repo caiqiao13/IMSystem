@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+package chat.pb;
+
+import "common.proto";
+import "chat.proto";
+
+// ==========================================
+// 内部消息结构 (Gateway <-> Logic <-> Message)
+// ==========================================
+
+// 保存消息到 DB 请求
+message SaveMsgReq {
+    ChatMsg msg = 1;
+}
+
+message SaveMsgResp {
+    BaseResponse base = 1;
+    string seq_id = 2; // 数据库生成的递增序号，用于消息同步
+}
+
+// 拉取离线消息请求
+message PullOfflineMsgReq {
+    uint64 user_id = 1;
+    string session_id = 2; // 可选，如果不填则拉取所有会话
+    string begin_seq = 3;  // 开始序号 (基于时间戳+雪花生成的严格递增 ID)
+    int32 limit = 4;       // 每次拉取的条数
+}
+
+message PullOfflineMsgResp {
+    BaseResponse base = 1;
+    repeated ChatMsg msg_list = 2;
+    bool has_more = 3;     // 是否还有更多离线消息
+    string next_seq = 4;   // 下次拉取的起始序号
+}
+
+// 内部消息存储服务 RPC
+service MessageService {
+    // 存储服务 (写入 MySQL/MongoDB)
+    rpc SaveMsg(SaveMsgReq) returns (SaveMsgResp);
+    
+    // 查询离线消息服务 (从 MySQL/MongoDB 读取)
+    rpc PullOfflineMsg(PullOfflineMsgReq) returns (PullOfflineMsgResp);
+}

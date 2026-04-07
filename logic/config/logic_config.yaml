@@ -1,0 +1,20 @@
+server:
+  grpc_port: 50051
+
+log:
+  level: "info"
+  file: "logs/logic.log"
+
+sensitive_words:
+  - "枪支"
+  - "毒品"
+  - "政治敏感"
+  - "色情"
+
+dependencies:
+  message_service: "chat-message-svc:50052"
+  user_service: "chat-user-svc:50050"
+  rabbitmq:
+    host: "127.0.0.1"
+    port: 5672
+    exchange: "chat.exchange"

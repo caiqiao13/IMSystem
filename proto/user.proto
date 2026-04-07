@@ -1,0 +1,91 @@
+syntax = "proto3";
+
+package chat.pb;
+
+import "common.proto";
+
+// ==========================================
+// User 登录注册
+// ==========================================
+message RegisterReq {
+    string username = 1;
+    string password = 2;
+    string nickname = 3;
+}
+
+message RegisterResp {
+    BaseResponse base = 1;
+    uint64 user_id = 2;
+}
+
+message LoginReq {
+    string username = 1;
+    string password = 2;
+    ClientType client_type = 3;
+    string device_id = 4;
+}
+
+message LoginResp {
+    BaseResponse base = 1;
+    UserInfo user_info = 2;
+    string token = 3;
+    uint64 expire_time = 4;
+}
+
+message LogoutReq {
+    uint64 user_id = 1;
+    string token = 2;
+}
+
+message LogoutResp {
+    BaseResponse base = 1;
+}
+
+// ==========================================
+// 关系管理 (好友)
+// ==========================================
+message AddFriendReq {
+    uint64 user_id = 1;
+    uint64 target_user_id = 2;
+    string verify_msg = 3;
+}
+
+message AddFriendResp {
+    BaseResponse base = 1;
+}
+
+message GetFriendListReq {
+    uint64 user_id = 1;
+    int32 page = 2;
+    int32 page_size = 3;
+}
+
+message GetFriendListResp {
+    BaseResponse base = 1;
+    repeated UserInfo friend_list = 2;
+    int32 total_count = 3;
+}
+
+// ==========================================
+// 用户信息管理
+// ==========================================
+message GetUserInfoReq {
+    repeated uint64 user_ids = 1; // 批量获取
+}
+
+message GetUserInfoResp {
+    BaseResponse base = 1;
+    repeated UserInfo user_infos = 2;
+}
+
+// User 服务 RPC 定义
+service UserService {
+    rpc Register(RegisterReq) returns (RegisterResp);
+    rpc Login(LoginReq) returns (LoginResp);
+    rpc Logout(LogoutReq) returns (LogoutResp);
+    
+    rpc AddFriend(AddFriendReq) returns (AddFriendResp);
+    rpc GetFriendList(GetFriendListReq) returns (GetFriendListResp);
+    
+    rpc GetUserInfo(GetUserInfoReq) returns (GetUserInfoResp);
+}

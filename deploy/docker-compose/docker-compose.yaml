@@ -1,0 +1,138 @@
+version: '3.8'
+
+services:
+  # ==========================================
+  # 基础设施服务 (Infrastructure)
+  # ==========================================
+  redis:
+    image: redis:7.0-alpine
+    container_name: chat_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    command: redis-server --appendonly yes --requirepass chat_pass
+    networks:
+      - chat_network
+    restart: always
+
+  mysql:
+    image: mysql:8.0
+    container_name: chat_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: chat_db
+      TZ: Asia/Shanghai
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - ./config/init_db.sql:/docker-entrypoint-initdb.d/init.sql # 初始化表结构
+    command: --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci
+    networks:
+      - chat_network
+    restart: always
+
+  mongodb:
+    image: mongo:6.0
+    container_name: chat_mongodb
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - chat_network
+    restart: always
+
+  rabbitmq:
+    image: rabbitmq:3.11-management-alpine
+    container_name: chat_rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin123
+    ports:
+      - "5672:5672"   # 业务通信端口
+      - "15672:15672" # Web 控制台端口
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+    networks:
+      - chat_network
+    restart: always
+
+  # ==========================================
+  # 微服务核心业务 (Microservices)
+  # ==========================================
+  gateway:
+    build: 
+      context: ../../
+      dockerfile: deploy/docker/Dockerfile
+    image: chat_system:latest
+    container_name: chat_gateway
+    command: ["/app/gateway_server"]
+    ports:
+      - "9000:9000" # TCP 长连接
+      - "8080:8080" # HTTP API
+    depends_on:
+      - redis
+      - rabbitmq
+    networks:
+      - chat_network
+    restart: always
+
+  logic:
+    image: chat_system:latest
+    container_name: chat_logic
+    command: ["/app/logic_service"]
+    depends_on:
+      - redis
+      - rabbitmq
+    networks:
+      - chat_network
+    restart: always
+
+  user:
+    image: chat_system:latest
+    container_name: chat_user
+    command: ["/app/user_service"]
+    depends_on:
+      - mysql
+      - redis
+    networks:
+      - chat_network
+    restart: always
+
+  message:
+    image: chat_system:latest
+    container_name: chat_message
+    command: ["/app/message_service"]
+    depends_on:
+      - mysql
+      - mongodb
+    networks:
+      - chat_network
+    restart: always
+
+  push:
+    image: chat_system:latest
+    container_name: chat_push
+    command: ["/app/push_service"]
+    depends_on:
+      - rabbitmq
+    networks:
+      - chat_network
+    restart: always
+
+# 存储卷定义，防止容器销毁后数据丢失
+volumes:
+  redis_data:
+  mysql_data:
+  mongo_data:
+  rabbitmq_data:
+
+# 网络定义
+networks:
+  chat_network:
+    driver: bridge

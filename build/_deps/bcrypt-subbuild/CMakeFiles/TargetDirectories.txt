@@ -1,0 +1,3 @@
+/workspace/chat-system/build/_deps/bcrypt-subbuild/CMakeFiles/bcrypt-populate.dir
+/workspace/chat-system/build/_deps/bcrypt-subbuild/CMakeFiles/edit_cache.dir
+/workspace/chat-system/build/_deps/bcrypt-subbuild/CMakeFiles/rebuild_cache.dir

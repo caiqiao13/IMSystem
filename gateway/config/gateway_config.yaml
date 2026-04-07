@@ -1,0 +1,18 @@
+server:
+  tcp_port: 9000
+  http_port: 8080
+  thread_pool_size: 4
+  heartbeat_timeout_sec: 30
+
+log:
+  level: "debug"
+  file: "logs/gateway.log"
+
+dependencies:
+  logic_service: "chat-logic-svc:50051"
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+  rabbitmq:
+    host: "127.0.0.1"
+    port: 5672

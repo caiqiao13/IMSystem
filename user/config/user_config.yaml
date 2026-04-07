@@ -1,0 +1,19 @@
+server:
+  grpc_port: 50050
+
+log:
+  level: "info"
+  file: "logs/user.log"
+
+dependencies:
+  mysql:
+    dsn: "root:root@tcp(127.0.0.1:3306)/chat_db"
+    max_connections: 50
+  redis:
+    host: "127.0.0.1"
+    port: 6379
+    password: "chat_pass"
+    db: 0
+
+token:
+  expire_seconds: 604800 # 7 days

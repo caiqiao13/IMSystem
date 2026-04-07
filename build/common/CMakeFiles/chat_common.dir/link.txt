@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../lib/libchat_common.a CMakeFiles/chat_common.dir/src/config/config_manager.cpp.o CMakeFiles/chat_common.dir/src/logger/logger.cpp.o CMakeFiles/chat_common.dir/src/mq/rabbitmq_client.cpp.o CMakeFiles/chat_common.dir/src/redis/redis_client.cpp.o CMakeFiles/chat_common.dir/src/utils/string_utils.cpp.o CMakeFiles/chat_common.dir/src/utils/time_utils.cpp.o
+/usr/bin/ranlib ../lib/libchat_common.a

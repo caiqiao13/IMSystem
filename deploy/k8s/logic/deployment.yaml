@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chat-logic
+  namespace: chat-system
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: chat-logic
+  template:
+    metadata:
+      labels:
+        app: chat-logic
+    spec:
+      containers:
+      - name: logic
+        image: registry.example.com/chat/logic:latest
+        ports:
+        - containerPort: 50051 # gRPC port
+        resources:
+          requests:
+            cpu: "250m"
+            memory: "256Mi"
+          limits:
+            cpu: "1"
+            memory: "1Gi"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: chat-logic-svc
+  namespace: chat-system
+spec:
+  type: ClusterIP # 内部服务，仅对 Gateway 等内部组件暴露
+  selector:
+    app: chat-logic
+  ports:
+    - name: grpc
+      protocol: TCP
+      port: 50051
+      targetPort: 50051

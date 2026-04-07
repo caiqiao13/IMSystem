@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package chat.pb;
+
+// 公共返回码
+enum ErrorCode {
+    SUCCESS = 0;
+    UNKNOWN_ERROR = 1;
+    UNAUTHORIZED = 2;
+    SERVER_INTERNAL_ERROR = 3;
+    INVALID_PARAM = 4;
+    USER_NOT_FOUND = 1001;
+    USER_ALREADY_EXISTS = 1002;
+    PASSWORD_ERROR = 1003;
+}
+
+// 终端类型
+enum ClientType {
+    CLIENT_UNKNOWN = 0;
+    CLIENT_PC = 1;
+    CLIENT_MAC = 2;
+    CLIENT_IOS = 3;
+    CLIENT_ANDROID = 4;
+    CLIENT_WEB = 5;
+}
+
+// 基础的通用响应头部
+message BaseResponse {
+    ErrorCode code = 1;
+    string msg = 2;
+}
+
+// 简化的用户信息
+message UserInfo {
+    uint64 user_id = 1;
+    string username = 2;
+    string nickname = 3;
+    string avatar_url = 4;
+    int32 status = 5; // 0: 离线, 1: 在线, 2: 忙碌, 3: 隐身
+}

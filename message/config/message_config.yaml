@@ -1,0 +1,14 @@
+server:
+  grpc_port: 50052
+
+log:
+  level: "info"
+  file: "logs/message.log"
+
+dependencies:
+  mongodb:
+    uri: "mongodb://root:root@chat_mongodb:27017/chat_db?authSource=admin"
+    max_pool_size: 100
+  mysql:
+    dsn: "root:root@tcp(chat_mysql:3306)/chat_db"
+    max_connections: 100

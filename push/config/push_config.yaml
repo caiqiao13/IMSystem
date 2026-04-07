@@ -1,0 +1,19 @@
+log:
+  level: "info"
+  file: "logs/push.log"
+
+dependencies:
+  rabbitmq:
+    host: "127.0.0.1"
+    port: 5672
+    user: "admin"
+    pass: "admin123"
+    queue: "chat.push.queue"
+
+platforms:
+  apns:
+    cert_path: "/etc/certs/apns_cert.pem"
+    key_path: "/etc/certs/apns_key.pem"
+    sandbox: true
+  fcm:
+    server_key: "AIzaSyB-YOUR-FIREBASE-SERVER-KEY"
