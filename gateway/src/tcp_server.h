@@ -4,6 +4,7 @@
 #include <memory>
 #include <string>
 #include <iostream>
+#include <atomic>
 #include "logger/logger.h"
 #include "utils/time_utils.h"
 
@@ -30,8 +31,8 @@ private:
     std::string write_msg_;
     char read_buffer_[1024];
 
-    int64_t last_active_time_;
-    bool is_stopped_;
+    std::atomic<int64_t> last_active_time_{0};
+    std::atomic<bool> is_stopped_{false};
     
     // 心跳超时阈值(秒)
     static constexpr int kHeartbeatTimeoutSec = 30;

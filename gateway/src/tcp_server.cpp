@@ -7,8 +7,7 @@ namespace chat::gateway {
 // =======================================================
 TcpConnection::TcpConnection(asio::io_context& io_context, asio::ip::tcp::socket socket)
     : socket_(std::move(socket)), 
-      timer_(io_context),
-      is_stopped_(false) {
+      timer_(io_context) {
     last_active_time_ = chat::common::utils::TimeUtils::GetCurrentTimestampSec();
 }
 
@@ -24,15 +23,15 @@ void TcpConnection::Start() {
 }
 
 void TcpConnection::Stop() {
-    if (is_stopped_) return;
-    is_stopped_ = true;
-
-    asio::error_code ec;
-    timer_.cancel(ec);
-    
-    if (socket_.is_open()) {
-        LOG_INFO("Closing connection: " + socket_.remote_endpoint(ec).address().to_string());
-        socket_.close(ec);
+    bool expected = false;
+    if (is_stopped_.compare_exchange_strong(expected, true)) {
+        asio::error_code ec;
+        timer_.cancel(ec);
+        
+        if (socket_.is_open()) {
+            LOG_INFO("Closing connection: " + socket_.remote_endpoint(ec).address().to_string());
+            socket_.close(ec);
+        }
     }
 }
 

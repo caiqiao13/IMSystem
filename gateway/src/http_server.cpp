@@ -27,7 +27,12 @@ void HttpConnection::DoRead() {
 }
 
 void HttpConnection::HandleRequest(const std::string& request_data) {
-    LOG_DEBUG("HTTP Request: \n" + request_data.substr(0, request_data.find("\r\n")));
+    auto pos = request_data.find("\r\n");
+    if (pos != std::string::npos) {
+        LOG_DEBUG("HTTP Request: \n" + request_data.substr(0, pos));
+    } else {
+        LOG_WARN("Malformed HTTP Request received.");
+    }
 
     // 使用 jsoncpp 构造 HTTP 200 OK 响应 JSON
     Json::Value root;

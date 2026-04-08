@@ -29,7 +29,8 @@ void TestPushManager() {
     PushManager::GetInstance().HandleIncomingPushTask("invalid_msg");
 
     // 测试合法的 iOS 消息 (User 2002 对应的设备在 Mock 中被写死)
-    PushManager::GetInstance().HandleIncomingPushTask("2002|1|Test content");
+    std::string valid_json = R"({"receiver_id": 2002, "msg_type": 1, "content": "Test content"})";
+    PushManager::GetInstance().HandleIncomingPushTask(valid_json);
 
     std::cout << "[Test] PushManager Passed." << std::endl;
 }

@@ -1,5 +1,6 @@
 #include "push_manager.h"
 #include "logger/logger.h"
+#include <json/json.h>
 
 namespace chat::push {
 
@@ -34,21 +35,32 @@ PushTask PushManager::ParseMessage(const std::string& raw_msg) {
     PushTask task;
     task.receiver_id = 0;
 
-    size_t pos1 = raw_msg.find('|');
-    if (pos1 == std::string::npos) return task;
-
-    size_t pos2 = raw_msg.find('|', pos1 + 1);
-    if (pos2 == std::string::npos) return task;
-
     try {
-        task.receiver_id = std::stoull(raw_msg.substr(0, pos1));
+        Json::Value root;
+        Json::CharReaderBuilder reader;
+        std::string errs;
+        std::istringstream s(raw_msg);
+
+        if (!Json::parseFromStream(reader, s, &root, &errs)) {
+            LOG_ERROR("Failed to parse MQ message as JSON: " + raw_msg + ", errs: " + errs);
+            return task;
+        }
+
+        // 校验必填字段
+        if (!root.isMember("receiver_id") || !root.isMember("msg_type") || !root.isMember("content")) {
+            LOG_ERROR("MQ JSON missing required fields: " + raw_msg);
+            return task;
+        }
+
+        task.receiver_id = root["receiver_id"].asUInt64();
         // MOCK: 解析出发送者名字或群组名字作为 Title
         task.title = "New Message";
-        task.content = raw_msg.substr(pos2 + 1);
+        task.content = root["content"].asString();
+
     } catch (const std::exception& e) {
-        LOG_ERROR("Failed to parse MQ message: " + raw_msg + ", exception: " + e.what());
+        LOG_ERROR("Exception parsing MQ JSON message: " + raw_msg + ", what: " + e.what());
     } catch (...) {
-        LOG_ERROR("Failed to parse MQ message with unknown exception: " + raw_msg);
+        LOG_ERROR("Unknown exception parsing MQ JSON message: " + raw_msg);
     }
     return task;
 }

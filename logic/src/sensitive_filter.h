@@ -2,19 +2,17 @@
 #include <string>
 #include <vector>
 #include <unordered_map>
+#include <memory>
 
 namespace chat::logic {
 
 // Trie 树节点，用于高效敏感词匹配
 struct TrieNode {
-    std::unordered_map<char, TrieNode*> children;
+    std::unordered_map<char, std::unique_ptr<TrieNode>> children;
     bool is_end = false;
     
-    ~TrieNode() {
-        for (auto& pair : children) {
-            delete pair.second;
-        }
-    }
+    // std::unique_ptr 会自动递归释放子节点，无需手动析构
+    ~TrieNode() = default;
 };
 
 class SensitiveFilter {
@@ -32,11 +30,11 @@ public:
 
 private:
     SensitiveFilter();
-    ~SensitiveFilter();
+    ~SensitiveFilter() = default;
     
     void AddWord(const std::string& word);
 
-    TrieNode* root_;
+    std::unique_ptr<TrieNode> root_;
 };
 
 } // namespace chat::logic

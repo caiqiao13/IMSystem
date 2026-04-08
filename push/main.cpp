@@ -38,14 +38,14 @@ void StartPushService() {
         std::thread logic_simulator([&callback]() {
             std::this_thread::sleep_for(std::chrono::seconds(2));
             
-            // 格式约定: 接收者ID|消息类型|消息体
+            // 格式约定: {"receiver_id": 2002, "msg_type": 1, "content": "Hello iOS User!"}
             LOG_INFO("Simulating Logic Server pushing to MQ (User 2002 / iOS)...");
-            callback("2002|1|Hello iOS User!");
+            callback(R"({"receiver_id": 2002, "msg_type": 1, "content": "Hello iOS User!"})");
             
             std::this_thread::sleep_for(std::chrono::seconds(2));
             
             LOG_INFO("Simulating Logic Server pushing to MQ (User 3003 / Android)...");
-            callback("3003|1|Hello Android User!");
+            callback(R"({"receiver_id": 3003, "msg_type": 1, "content": "Hello Android User!"})");
         });
 
         // 阻塞当前线程，持续消费 MQ

@@ -4,11 +4,7 @@
 namespace chat::logic {
 
 SensitiveFilter::SensitiveFilter() {
-    root_ = new TrieNode();
-}
-
-SensitiveFilter::~SensitiveFilter() {
-    delete root_;
+    root_ = std::make_unique<TrieNode>();
 }
 
 SensitiveFilter& SensitiveFilter::GetInstance() {
@@ -26,12 +22,12 @@ void SensitiveFilter::Init(const std::vector<std::string>& words) {
 void SensitiveFilter::AddWord(const std::string& word) {
     if (word.empty()) return;
     
-    TrieNode* node = root_;
+    TrieNode* node = root_.get();
     for (char c : word) {
         if (node->children.find(c) == node->children.end()) {
-            node->children[c] = new TrieNode();
+            node->children[c] = std::make_unique<TrieNode>();
         }
-        node = node->children[c];
+        node = node->children[c].get();
     }
     node->is_end = true;
 }
@@ -40,14 +36,14 @@ bool SensitiveFilter::HasSensitiveWord(const std::string& text) {
     if (text.empty() || root_->children.empty()) return false;
     
     for (size_t i = 0; i < text.length(); ++i) {
-        TrieNode* node = root_;
+        TrieNode* node = root_.get();
         size_t j = i;
         while (j < text.length()) {
             char c = text[j];
             if (node->children.find(c) == node->children.end()) {
                 break;
             }
-            node = node->children[c];
+            node = node->children[c].get();
             if (node->is_end) {
                 return true;
             }
@@ -63,7 +59,7 @@ std::string SensitiveFilter::Filter(const std::string& text) {
     std::string result = text;
     size_t i = 0;
     while (i < text.length()) {
-        TrieNode* node = root_;
+        TrieNode* node = root_.get();
         size_t j = i;
         bool found = false;
         
@@ -72,7 +68,7 @@ std::string SensitiveFilter::Filter(const std::string& text) {
             if (node->children.find(c) == node->children.end()) {
                 break;
             }
-            node = node->children[c];
+            node = node->children[c].get();
             if (node->is_end) {
                 found = true;
                 // 将匹配到的敏感词替换为 *
