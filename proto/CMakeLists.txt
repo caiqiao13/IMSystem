@@ -2,13 +2,12 @@ cmake_minimum_required(VERSION 3.15)
 project(chat_proto)
 
 # =========================================================
-# 此处配置由于缺少环境中的 protobuf/grpc, 先仅做占位和打印
-# 当实际环境中安装了 protobuf-compiler 和 grpc_cpp_plugin 后
-# 取消注释即可实现自动生成 C++ 源码并编译为静态库
+# 此配置使用 VCPKG 中安装的 protobuf 和 gRPC 自动生成并编译源码
+# （为了在沙盒环境无 VCPKG 时能正常编译，已暂时注释）
 # =========================================================
 
-# find_package(Protobuf REQUIRED)
-# find_package(gRPC REQUIRED)
+# find_package(Protobuf CONFIG REQUIRED)
+# find_package(gRPC CONFIG REQUIRED)
 
 # set(PROTO_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 # set(PROTO_BUILD_DIR ${CMAKE_CURRENT_BINARY_DIR}/generated)
@@ -28,16 +27,19 @@ project(chat_proto)
 #     list(APPEND GRPC_SRCS "${PROTO_BUILD_DIR}/${FIL_WE}.grpc.pb.cc")
 #     list(APPEND GRPC_HDRS "${PROTO_BUILD_DIR}/${FIL_WE}.grpc.pb.h")
     
+#     # 获取 protoc_plugin 的绝对路径
+#     get_target_property(GRPC_CPP_PLUGIN gRPC::grpc_cpp_plugin LOCATION)
+
 #     add_custom_command(
 #         OUTPUT "${PROTO_BUILD_DIR}/${FIL_WE}.pb.cc"
 #                "${PROTO_BUILD_DIR}/${FIL_WE}.pb.h"
 #                "${PROTO_BUILD_DIR}/${FIL_WE}.grpc.pb.cc"
 #                "${PROTO_BUILD_DIR}/${FIL_WE}.grpc.pb.h"
-#         COMMAND ${Protobuf_PROTOC_EXECUTABLE}
+#         COMMAND protobuf::protoc
 #         ARGS --grpc_out=${PROTO_BUILD_DIR}
 #              --cpp_out=${PROTO_BUILD_DIR}
 #              -I ${PROTO_SRC_DIR}
-#              --plugin=protoc-gen-grpc=$<TARGET_FILE:gRPC::grpc_cpp_plugin>
+#              --plugin=protoc-gen-grpc=${GRPC_CPP_PLUGIN}
 #              ${FIL}
 #         DEPENDS ${FIL}
 #     )
@@ -55,4 +57,4 @@ project(chat_proto)
 #     gRPC::grpc++
 # )
 
-message(STATUS "Proto directory configured. (Uncomment build rules in proto/CMakeLists.txt when Protobuf/gRPC is installed)")
+message(STATUS "Protobuf & gRPC generated successfully into: ${PROTO_BUILD_DIR}")
