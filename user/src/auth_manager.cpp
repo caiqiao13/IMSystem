@@ -1,9 +1,13 @@
 #include "auth_manager.h"
 #include "logger/logger.h"
 #include "token_manager.h"
+#include "db/mysql_pool.h"
+#include "utils/retry.h"
 #include <iostream>
 #include <json/json.h>
 #include <bcrypt/BCrypt.hpp> // 引入 trusch/libbcrypt
+#include <cppconn/prepared_statement.h>
+#include <cppconn/resultset.h>
 
 namespace chat::user {
 
@@ -23,34 +27,59 @@ bool AuthManager::ValidatePassword(const std::string& plain_text, const std::str
     return BCrypt::validatePassword(plain_text, hash_pass);
 }
 
-uint64_t AuthManager::MockGetUserIdByUsername(const std::string& username) {
-    if (username == "test_user") return 1001;
-    if (username == "test_friend") return 2002;
-    return 0; // 不存在
+uint64_t AuthManager::GetUserIdByUsername(const std::string& username) {
+    try {
+        return chat::common::utils::ExecuteWithRetry<uint64_t>(3, 500, "DB Query User", [&]() {
+            chat::common::MysqlConnectionGuard guard(&chat::common::MysqlConnectionPool::GetInstance());
+            auto conn = guard.Get();
+            if (!conn) throw std::runtime_error("Failed to get DB connection");
+
+            std::unique_ptr<sql::PreparedStatement> pstmt(conn->prepareStatement("SELECT id FROM users WHERE username = ?"));
+            pstmt->setString(1, username);
+            std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+
+            if (res->next()) {
+                return res->getUInt64("id");
+            }
+            return static_cast<uint64_t>(0); // 未找到
+        });
+    } catch (...) {
+        LOG_ERROR("DB Query User failed after retries.");
+        return 0;
+    }
 }
 
-// 模拟从数据库中取出保存好的 hash 密码进行验证
-bool AuthManager::MockCheckPassword(uint64_t user_id, const std::string& plain_pass) {
-    // MOCK: 在真实业务中，这里应该是从 DB 里查出的 hashed_pw 
-    // 下面是我通过 bcrypt::generateHash("123456", 12) 生成的真实 bcrypt 字符串
-    if (user_id == 1001) {
-        std::string db_hash = "$2b$12$4e9L7bQ2x5h8QxL6K8P1Ne/ZJ/jK7R3bO7H4lJ3YfH7wJvM0H3vQ."; // Mock valid hash
-        return true; // 为了沙盒环境测试不阻塞，这里由于上面没有真的存 DB，直接 Mock 返回 true
+bool AuthManager::CheckPassword(uint64_t user_id, const std::string& password) {
+    try {
+        std::string db_hash = chat::common::utils::ExecuteWithRetry<std::string>(3, 500, "DB Check Password", [&]() {
+            chat::common::MysqlConnectionGuard guard(&chat::common::MysqlConnectionPool::GetInstance());
+            auto conn = guard.Get();
+            if (!conn) throw std::runtime_error("Failed to get DB connection");
+
+            std::unique_ptr<sql::PreparedStatement> pstmt(conn->prepareStatement("SELECT password_hash FROM users WHERE id = ?"));
+            pstmt->setUInt64(1, user_id);
+            std::unique_ptr<sql::ResultSet> res(pstmt->executeQuery());
+
+            if (res->next()) {
+                return res->getString("password_hash");
+            }
+            return std::string("");
+        });
+
+        if (db_hash.empty()) return false;
+
+        return BCrypt::validatePassword(password, db_hash);
+    } catch (...) {
+        LOG_ERROR("DB Check Password failed after retries.");
+        return false;
     }
-    
-    if (user_id == 2002) {
-        std::string db_hash = "$2b$12$4e9L7bQ2x5h8QxL6K8P1Ne/ZJ/jK7R3bO7H4lJ3YfH7wJvM0H3vQ."; 
-        return true;
-    }
-    
-    return false;
 }
 
 std::tuple<bool, std::string, uint64_t> AuthManager::Register(const std::string& username, const std::string& password, const std::string& nickname) {
     LOG_INFO("Processing Registration for Username: " + username);
 
     // 1. 检查是否已经存在
-    if (MockGetUserIdByUsername(username) != 0) {
+    if (GetUserIdByUsername(username) != 0) {
         LOG_WARN("Username already exists: " + username);
         return {false, "USER_ALREADY_EXISTS", 0};
     }
@@ -58,8 +87,40 @@ std::tuple<bool, std::string, uint64_t> AuthManager::Register(const std::string&
     // 2. Hash 密码
     std::string hashed_pw = HashPassword(password);
 
-    // 3. 写入 MySQL DB (生成 UserID, 例如 3003)
-    uint64_t new_user_id = 3003; 
+    // 3. 写入 MySQL DB
+    uint64_t new_user_id = 0;
+    try {
+        new_user_id = chat::common::utils::ExecuteWithRetry<uint64_t>(3, 500, "DB Insert User", [&]() {
+            chat::common::MysqlConnectionGuard guard(&chat::common::MysqlConnectionPool::GetInstance());
+            auto conn = guard.Get();
+            if (!conn) throw std::runtime_error("Failed to get DB connection");
+
+            std::unique_ptr<sql::PreparedStatement> pstmt(conn->prepareStatement(
+                "INSERT INTO users (username, password_hash, nickname) VALUES (?, ?, ?)"
+            ));
+            pstmt->setString(1, username);
+            pstmt->setString(2, hashed_pw);
+            pstmt->setString(3, nickname);
+            
+            pstmt->executeUpdate();
+            
+            // 获取刚插入的自增ID (LAST_INSERT_ID)
+            std::unique_ptr<sql::PreparedStatement> id_stmt(conn->prepareStatement("SELECT LAST_INSERT_ID() AS id"));
+            std::unique_ptr<sql::ResultSet> res(id_stmt->executeQuery());
+            if (res->next()) {
+                return res->getUInt64("id");
+            }
+            return static_cast<uint64_t>(0);
+        });
+    } catch (...) {
+        LOG_ERROR("DB Insert User failed after retries.");
+        return {false, "SERVER_INTERNAL_ERROR", 0};
+    }
+
+    if (new_user_id == 0) {
+        return {false, "SERVER_INTERNAL_ERROR", 0};
+    }
+
     LOG_INFO("Saved new user to DB. UserID: " + std::to_string(new_user_id) + ", Nickname: " + nickname);
 
     return {true, "SUCCESS", new_user_id};
@@ -69,14 +130,14 @@ std::tuple<bool, std::string, std::string, std::string> AuthManager::Login(const
     LOG_INFO("Processing Login for Username: " + username + " (Client: " + std::to_string(client_type) + ")");
 
     // 1. 查询用户 ID
-    uint64_t user_id = MockGetUserIdByUsername(username);
+    uint64_t user_id = GetUserIdByUsername(username);
     if (user_id == 0) {
         LOG_WARN("Login failed. User not found: " + username);
         return {false, "USER_NOT_FOUND", "", ""};
     }
 
     // 2. 校验密码
-    if (!MockCheckPassword(user_id, password)) {
+    if (!CheckPassword(user_id, password)) {
         LOG_WARN("Login failed. Password error for user_id: " + std::to_string(user_id));
         return {false, "PASSWORD_ERROR", "", ""};
     }

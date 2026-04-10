@@ -30,9 +30,11 @@ private:
     AuthManager() = default;
     ~AuthManager() = default;
 
-    // TODO: Connect to MySQL to read/write user records
-    uint64_t MockGetUserIdByUsername(const std::string& username);
-    bool MockCheckPassword(uint64_t user_id, const std::string& hash_pass);
+    // ==========================================
+    // DB Operations
+    // ==========================================
+    uint64_t GetUserIdByUsername(const std::string& username);
+    bool CheckPassword(uint64_t user_id, const std::string& password);
 };
 
 } // namespace chat::user

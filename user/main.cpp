@@ -3,6 +3,7 @@
 #include <chrono>
 
 #include "logger/logger.h"
+#include "config/config_manager.h"
 #include "token_manager.h"
 #include "auth_manager.h"
 #include "friend_manager.h"
@@ -11,7 +12,8 @@ using namespace chat::user;
 
 // 模拟 User gRPC 服务的启动
 void StartUserGrpcServer() {
-    std::string server_address("0.0.0.0:50050");
+    int port = chat::common::ConfigManager::GetInstance().GetInt("server.grpc_port", 50050);
+    std::string server_address("0.0.0.0:" + std::to_string(port));
     LOG_INFO("User Service listening on " + server_address);
 
     // 阻塞线程模拟 gRPC 服务器的长期运行
@@ -21,17 +23,29 @@ void StartUserGrpcServer() {
 }
 
 int main() {
-    // 1. 初始化日志
-    chat::common::Logger::GetInstance().Init("user.log", "info");
+    // 1) 加载配置
+    const std::string config_path = "user/config/user_config.yaml";
+    if (!chat::common::ConfigManager::GetInstance().Load(config_path)) {
+        chat::common::Logger::GetInstance().Init("logs/user.log", "info");
+        LOG_ERROR("Failed to load config: " + config_path);
+        return -1;
+    }
+
+    // 2) 初始化日志
+    const std::string log_file = chat::common::ConfigManager::GetInstance().GetString("log.file", "logs/user.log");
+    const std::string log_level = chat::common::ConfigManager::GetInstance().GetString("log.level", "info");
+    chat::common::Logger::GetInstance().Init(log_file, log_level);
     LOG_INFO("Starting Chat System User Service...");
 
-    // 2. 初始化 Token 管理器 (连接 Redis)
-    if (!TokenManager::GetInstance().Init("127.0.0.1", 6379)) {
+    // 3. 初始化 Token 管理器 (连接 Redis)
+    const std::string redis_host = chat::common::ConfigManager::GetInstance().GetString("dependencies.redis.host", "127.0.0.1");
+    const int redis_port = chat::common::ConfigManager::GetInstance().GetInt("dependencies.redis.port", 6379);
+    if (!TokenManager::GetInstance().Init(redis_host, redis_port)) {
         LOG_ERROR("Failed to initialize TokenManager (Redis connection failed)");
         return -1;
     }
 
-    // 3. 模拟 Gateway 转发来的客户端登录请求
+    // 4. 模拟 Gateway 转发来的客户端登录请求
     std::thread auth_simulator([]() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
         
@@ -59,7 +73,7 @@ int main() {
         }
     });
 
-    // 4. 启动 gRPC 服务
+    // 5. 启动 gRPC 服务
     try {
         StartUserGrpcServer();
     } catch (const std::exception& e) {

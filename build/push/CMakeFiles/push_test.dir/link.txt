@@ -1,1 +1,0 @@
-/usr/bin/c++ -O3 -DNDEBUG CMakeFiles/push_test.dir/test/push_test.cpp.o CMakeFiles/push_test.dir/src/apns_client.cpp.o CMakeFiles/push_test.dir/src/fcm_client.cpp.o CMakeFiles/push_test.dir/src/push_manager.cpp.o -o ../bin/push_test  -Wl,-rpath,/workspace/chat-system/build/lib ../lib/libchat_common.a ../lib/libspdlog.so.1.11.0 ../lib/libjsoncpp.so.1.9.5 ../lib/libbcrypt.so.1.0.0 

@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.15)
+project(chat_system_tests)
+
+add_executable(config_manager_test config_manager_test.cpp)
+target_link_libraries(config_manager_test PRIVATE chat_common)
+
+add_test(NAME ConfigManagerTest COMMAND config_manager_test)

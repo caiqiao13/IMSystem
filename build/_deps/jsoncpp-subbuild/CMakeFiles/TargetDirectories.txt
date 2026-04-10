@@ -1,3 +1,0 @@
-/workspace/chat-system/build/_deps/jsoncpp-subbuild/CMakeFiles/jsoncpp-populate.dir
-/workspace/chat-system/build/_deps/jsoncpp-subbuild/CMakeFiles/edit_cache.dir
-/workspace/chat-system/build/_deps/jsoncpp-subbuild/CMakeFiles/rebuild_cache.dir

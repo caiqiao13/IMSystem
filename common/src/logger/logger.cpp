@@ -2,6 +2,7 @@
 #include <spdlog/sinks/stdout_color_sinks.h>
 #include <spdlog/sinks/rotating_file_sink.h>
 #include <iostream>
+#include <filesystem>
 
 namespace chat::common {
 
@@ -19,6 +20,19 @@ Logger& Logger::GetInstance() {
 
 void Logger::Init(const std::string& log_file, const std::string& level) {
     try {
+        if (!log_file.empty()) {
+            std::filesystem::path p(log_file);
+            auto parent = p.parent_path();
+            if (!parent.empty()) {
+                std::error_code ec;
+                std::filesystem::create_directories(parent, ec);
+                if (ec) {
+                    std::cerr << "Failed to create log directory: " << parent.string()
+                              << ", error: " << ec.message() << std::endl;
+                }
+            }
+        }
+
         // 创建终端输出 Sink
         auto console_sink = std::make_shared<spdlog::sinks::stdout_color_sink_mt>();
         

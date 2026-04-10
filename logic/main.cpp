@@ -5,57 +5,96 @@
 #include <chrono>
 
 #include "logger/logger.h"
+#include "config/config_manager.h"
 #include "sensitive_filter.h"
 #include "message_processor.h"
 #include "utils/time_utils.h"
 
-using namespace chat::logic;
+// 如果能引入生成的 gRPC 代码，则启动真实服务器
+#if __has_include("chat.grpc.pb.h")
+#include "chat.grpc.pb.h"
+#include <grpcpp/grpcpp.h>
+using grpc::Server;
+using grpc::ServerBuilder;
+using grpc::ServerContext;
+using grpc::Status;
+using chat::pb::LogicService;
+using chat::pb::SendMsgReq;
+using chat::pb::SendMsgResp;
 
-// 模拟 gRPC Server 的启动流程
-// 在真实的 gRPC 环境下，这里会注册 `ChatServiceImpl` 并调用 `builder.BuildAndStart()`
+class LogicServiceImpl final : public LogicService::Service {
+public:
+    Status SendMessage(ServerContext* context, const SendMsgReq* request, SendMsgResp* response) override {
+        chat::logic::LogicChatMsg msg;
+        msg.msg_id = request->msg_id();
+        msg.sender_id = request->sender_id();
+        msg.receiver_id = request->receiver_id();
+        msg.session_type = request->session_type();
+        msg.msg_type = request->msg_type();
+        msg.content = request->content();
+        msg.send_time = chat::common::utils::TimeUtils::GetCurrentTimestampMs();
+
+        std::string final_seq_id;
+        bool success = chat::logic::MessageProcessor::GetInstance().ProcessIncomingMessage(msg, final_seq_id);
+        
+        if (success) {
+            response->set_code(0);
+            response->set_msg("SUCCESS");
+            response->set_seq_id(final_seq_id);
+            return Status::OK;
+        } else {
+            response->set_code(500);
+            response->set_msg("Internal Error or Validation Failed");
+            return Status::OK; // 业务错误仍返回 OK 状态码
+        }
+    }
+};
+
 void StartGrpcServer() {
-    std::string server_address("0.0.0.0:50051");
-    LOG_INFO("Logic Service listening on " + server_address);
+    int port = chat::common::ConfigManager::GetInstance().GetInt("server.grpc_port", 50051);
+    std::string server_address("0.0.0.0:" + std::to_string(port));
+    LogicServiceImpl service;
 
-    // 阻塞线程模拟服务器运行
+    ServerBuilder builder;
+    builder.AddListeningPort(server_address, grpc::InsecureServerCredentials());
+    builder.RegisterService(&service);
+    std::unique_ptr<Server> server(builder.BuildAndStart());
+    
+    LOG_INFO("Real Logic gRPC Service listening on " + server_address);
+    server->Wait();
+}
+#else
+void StartGrpcServer() {
+    int port = chat::common::ConfigManager::GetInstance().GetInt("server.grpc_port", 50051);
+    std::string server_address("0.0.0.0:" + std::to_string(port));
+    LOG_INFO("Mock Logic Service listening on " + server_address);
     while (true) {
         std::this_thread::sleep_for(std::chrono::hours(24));
     }
 }
+#endif
 
 int main() {
-    // 1. 初始化日志
-    chat::common::Logger::GetInstance().Init("logic.log", "info");
+    // 1) 加载配置
+    const std::string config_path = "logic/config/logic_config.yaml";
+    if (!chat::common::ConfigManager::GetInstance().Load(config_path)) {
+        chat::common::Logger::GetInstance().Init("logs/logic.log", "info");
+        LOG_ERROR("Failed to load config: " + config_path);
+        return -1;
+    }
+
+    // 2) 初始化日志
+    const std::string log_file = chat::common::ConfigManager::GetInstance().GetString("log.file", "logs/logic.log");
+    const std::string log_level = chat::common::ConfigManager::GetInstance().GetString("log.level", "info");
+    chat::common::Logger::GetInstance().Init(log_file, log_level);
     LOG_INFO("Starting Chat System Logic Service...");
 
-    // 2. 初始化敏感词库
-    std::vector<std::string> bad_words = { "枪支", "毒品", "政治敏感" };
-    SensitiveFilter::GetInstance().Init(bad_words);
-
-    // 3. 模拟一条请求 (相当于接收到了 Gateway 通过 gRPC 发来的 SendMsgReq)
-    std::thread simulator([]() {
-        std::this_thread::sleep_for(std::chrono::seconds(2));
-        
-        LOG_INFO("Simulating an incoming message from Gateway...");
-        
-        LogicChatMsg mock_msg;
-        mock_msg.msg_id = "MSG-UUID-12345678";
-        mock_msg.sender_id = 1001;
-        mock_msg.receiver_id = 2002;
-        mock_msg.session_type = 1; // 单聊
-        mock_msg.msg_type = 1;     // 文本
-        mock_msg.content = "我要买枪支和子弹"; // 包含敏感词
-        mock_msg.send_time = chat::common::utils::TimeUtils::GetCurrentTimestampMs();
-
-        std::string final_seq_id;
-        bool success = MessageProcessor::GetInstance().ProcessIncomingMessage(mock_msg, final_seq_id);
-        
-        if (success) {
-            LOG_INFO("Simulation Success. Filtered Content: [" + mock_msg.content + "], Assigned SeqId: " + final_seq_id);
-        } else {
-            LOG_ERROR("Simulation Failed.");
-        }
-    });
+    // 3. 初始化敏感词库
+    auto bad_words = chat::common::ConfigManager::GetInstance().GetStringList("sensitive_words");
+    if (bad_words.empty()) {
+        bad_words = { "枪支", "毒品", "政治敏感" };
+    }
+    chat::logic::SensitiveFilter::GetInstance().Init(bad_words);
 
     // 4. 启动 gRPC 逻辑服务主循环
     try {
@@ -65,6 +104,5 @@ int main() {
         return -1;
     }
 
-    simulator.join();
     return 0;
 }

@@ -1,4 +1,16 @@
 #include "tcp_server.h"
+#include <json/json.h>
+#include <sstream>
+#include "utils/retry.h"
+
+// 假设本地有 gRPC 桩代码 (生产环境使用)
+#if __has_include("chat.grpc.pb.h")
+#include "chat.grpc.pb.h"
+#include <grpcpp/grpcpp.h>
+using chat::pb::LogicService;
+using chat::pb::SendMsgReq;
+using chat::pb::SendMsgResp;
+#endif
 
 namespace chat::gateway {
 
@@ -47,24 +59,94 @@ void TcpConnection::DoRead() {
     socket_.async_read_some(asio::buffer(read_buffer_, sizeof(read_buffer_)),
         [this, self](asio::error_code ec, std::size_t length) {
             if (!ec) {
-                // 更新活跃时间 (心跳检测依赖此值)
                 last_active_time_ = chat::common::utils::TimeUtils::GetCurrentTimestampSec();
-                
                 std::string msg(read_buffer_, length);
-                // 模拟简单的 PING/PONG
-                if (msg.find("PING") != std::string::npos) {
-                    Send("PONG\n");
-                } else {
-                    LOG_DEBUG("TCP Recv: " + msg);
-                    // TODO: 路由给 Logic Server 处理业务逻辑
-                    Send("ACK: " + msg);
-                }
+                
+                // 协议解析与错误处理
+                ParseAndRouteMessage(msg);
+                
                 DoRead();
             } else {
                 LOG_WARN("TCP Read Error or Connection closed: " + ec.message());
                 Stop();
             }
         });
+}
+
+void TcpConnection::ParseAndRouteMessage(const std::string& raw_msg) {
+    if (raw_msg.find("PING") != std::string::npos) {
+        Send("PONG\n");
+        return;
+    }
+
+    // 尝试按照 JSON 协议解析
+    Json::Value root;
+    Json::CharReaderBuilder reader;
+    std::string errs;
+    std::istringstream s(raw_msg);
+
+    if (!Json::parseFromStream(reader, s, &root, &errs)) {
+        LOG_WARN("Protocol Parse Error (Invalid JSON): " + errs);
+        Send("{\"code\": 400, \"msg\": \"Invalid JSON protocol\"}\n");
+        return;
+    }
+
+    if (!root.isMember("cmd") || !root.isMember("payload")) {
+        Send("{\"code\": 400, \"msg\": \"Missing cmd or payload field\"}\n");
+        return;
+    }
+
+    std::string cmd = root["cmd"].asString();
+    Json::Value payload = root["payload"];
+
+    if (cmd == "send_msg") {
+        ForwardToLogicService(payload);
+    } else {
+        Send("{\"code\": 404, \"msg\": \"Unknown command\"}\n");
+    }
+}
+
+void TcpConnection::ForwardToLogicService(const Json::Value& payload) {
+#if __has_include("chat.grpc.pb.h")
+    // 使用带重试机制的 gRPC 调用，容忍网络抖动或 Logic 节点瞬时不可用
+    chat::common::utils::ExecuteWithRetryVoid(3, 500, "gRPC SendMessage", [&]() {
+        // 构建真实的 gRPC 客户端
+        auto channel = grpc::CreateChannel("localhost:50051", grpc::InsecureChannelCredentials());
+        auto stub = LogicService::NewStub(channel);
+
+        SendMsgReq req;
+        req.set_msg_id(payload["msg_id"].asString());
+        req.set_sender_id(payload["sender_id"].asUInt64());
+        req.set_receiver_id(payload["receiver_id"].asUInt64());
+        req.set_session_type(payload["session_type"].asInt());
+        req.set_msg_type(payload["msg_type"].asInt());
+        req.set_content(payload["content"].asString());
+
+        SendMsgResp resp;
+        grpc::ClientContext context;
+        // 设置超时时间 3 秒
+        context.set_deadline(std::chrono::system_clock::now() + std::chrono::seconds(3));
+
+        grpc::Status status = stub->SendMessage(&context, req, &resp);
+        if (!status.ok()) {
+            throw std::runtime_error("gRPC Error: " + status.error_message());
+        }
+
+        // 返回给客户端
+        Json::Value result;
+        result["code"] = resp.code();
+        result["msg"] = resp.msg();
+        result["seq_id"] = resp.seq_id();
+        
+        Json::StreamWriterBuilder writer;
+        writer["indentation"] = "";
+        Send(Json::writeString(writer, result) + "\n");
+    });
+#else
+    // Sandbox Mock
+    LOG_INFO("Mock Forwarding to LogicService: " + payload["msg_id"].asString());
+    Send("{\"code\": 0, \"msg\": \"SUCCESS\", \"seq_id\": \"MOCK_SEQ_123\"}\n");
+#endif
 }
 
 void TcpConnection::DoWrite() {
@@ -78,12 +160,10 @@ void TcpConnection::DoWrite() {
         });
 }
 
-// 异步心跳超时熔断检测
 void TcpConnection::CheckHeartbeat() {
     if (is_stopped_) return;
 
     auto self(shared_from_this());
-    // 每 5 秒检查一次
     timer_.expires_after(std::chrono::seconds(5));
     timer_.async_wait([this, self](asio::error_code ec) {
         if (ec || is_stopped_) return;
@@ -93,7 +173,6 @@ void TcpConnection::CheckHeartbeat() {
             LOG_WARN("Connection Timeout (No heartbeat for " + std::to_string(kHeartbeatTimeoutSec) + "s). Disconnecting.");
             Stop();
         } else {
-            // 继续下一轮检查
             CheckHeartbeat();
         }
     });

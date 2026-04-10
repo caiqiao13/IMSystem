@@ -8,6 +8,8 @@
 #include "logger/logger.h"
 #include "utils/time_utils.h"
 
+#include <json/json.h>
+
 namespace chat::gateway {
 
 class TcpConnection : public std::enable_shared_from_this<TcpConnection> {
@@ -25,6 +27,10 @@ private:
     void DoRead();
     void DoWrite();
     void CheckHeartbeat();
+    
+    void ParseAndRouteMessage(const std::string& raw_msg);
+    void ForwardToLogicService(const Json::Value& payload);
+
 
     asio::ip::tcp::socket socket_;
     asio::steady_timer timer_;

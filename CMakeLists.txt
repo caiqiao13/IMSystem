@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.15)
 project(ChatSystem VERSION 1.0.0 LANGUAGES CXX)
 
+# Compatibility guard for legacy third-party CMakeLists (e.g. old bcrypt).
+set(CMAKE_POLICY_VERSION_MINIMUM "3.5")
+
 # ==============================================================================
 # 1. 编译选项 (Compile Options)
 # ==============================================================================
@@ -14,13 +17,16 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
   set_property(CACHE CMAKE_BUILD_TYPE PROPERTY STRINGS "Debug" "Release" "MinSizeRel" "RelWithDebInfo")
 endif()
 
-# 通用编译警告选项
-add_compile_options(
-    -Wall
-    -Wextra
-    -Wpedantic
-    -Wno-unused-parameter
-)
+if(MSVC)
+  add_compile_options(/W4 /permissive-)
+else()
+  add_compile_options(
+      -Wall
+      -Wextra
+      -Wpedantic
+      -Wno-unused-parameter
+  )
+endif()
 
 if(CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_options(-g -O0)
@@ -40,6 +46,12 @@ set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 # ==============================================================================
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
+
+# ==============================================================================
+# 3.1 项目依赖 (Dependencies)
+# ==============================================================================
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include(Dependencies)
 
 # ==========================================================
 # 依赖库查找模板 (由于环境未安装，这里暂时注释掉，按需启用)

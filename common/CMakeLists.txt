@@ -2,24 +2,11 @@ cmake_minimum_required(VERSION 3.15)
 project(chat_common)
 
 include(FetchContent)
-
-# 1. 引入 spdlog
-FetchContent_Declare(
-  spdlog
-  URL https://github.com/gabime/spdlog/archive/refs/tags/v1.11.0.tar.gz
-)
-FetchContent_MakeAvailable(spdlog)
-
-# 2. 引入 jsoncpp
-FetchContent_Declare(
-  jsoncpp
-  URL https://github.com/open-source-parsers/jsoncpp/archive/refs/tags/1.9.5.tar.gz
-)
-set(JSONCPP_WITH_TESTS OFF CACHE BOOL "Disable jsoncpp tests" FORCE)
-set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF CACHE BOOL "Disable jsoncpp tests" FORCE)
-FetchContent_MakeAvailable(jsoncpp)
-
-# 3. 引入 bcrypt (用于密码加密)
+# 依赖由根目录 `cmake/Dependencies.cmake` 统一处理：
+# - 优先使用系统 find_package
+# - 找不到则 FetchContent 拉取源码构建
+# 这样 Windows 本地环境不需要预装 spdlog/jsoncpp 也能配置成功。
+# 引入 bcrypt (用于密码加密)
 FetchContent_Declare(
   bcrypt
   GIT_REPOSITORY https://github.com/trusch/libbcrypt.git

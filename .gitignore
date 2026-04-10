@@ -1,0 +1,34 @@
+.vs/
+.vscode/
+.idea/
+
+# CMake
+build/
+out/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CTestTestfile.cmake
+compile_commands.json
+*.cmake
+
+# MSVC / Windows build artifacts
+*.obj
+*.pdb
+*.ilk
+*.idb
+*.tlog
+*.ipch
+*.vcxproj*
+*.sln
+*.exe
+*.dll
+*.lib
+
+# Logs / runtime output
+logs/
+*.log
+
+# OS
+Thumbs.db
+Desktop.ini

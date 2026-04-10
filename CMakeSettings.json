@@ -1,0 +1,46 @@
+{
+  "configurations": [
+    {
+      "name": "x64-Debug",
+      "environments": [
+        {
+          "VCPKG_ROOT": "C:/Users/13/Desktop/1/vcpkg"
+        }
+      ],
+      "generator": "Visual Studio 18 2026 Win64",
+      "configurationType": "Debug",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=C:/Users/13/Desktop/1/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows -DCHAT_SYSTEM_FETCH_DEPS=OFF",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "cl.exe"
+        }
+      ]
+    },
+    {
+      "name": "x64-Release",
+      "environments": [
+        {
+          "VCPKG_ROOT": "C:/Users/13/Desktop/1/vcpkg"
+        }
+      ],
+      "generator": "Visual Studio 18 2026 Win64",
+      "configurationType": "Release",
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "-DCMAKE_TOOLCHAIN_FILE=C:/Users/13/Desktop/1/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_TARGET_TRIPLET=x64-windows -DCHAT_SYSTEM_FETCH_DEPS=OFF",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CMAKE_CXX_COMPILER",
+          "value": "cl.exe"
+        }
+      ]
+    }
+  ]
+}

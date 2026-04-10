@@ -5,6 +5,7 @@
 #include <chrono>
 
 #include "logger/logger.h"
+#include "config/config_manager.h"
 #include "message_sync.h"
 #include "utils/time_utils.h"
 
@@ -13,7 +14,8 @@ using namespace chat::logic; // 借用 LogicChatMsg 的定义结构
 
 // 模拟 Message gRPC 服务端的启动
 void StartMessageGrpcServer() {
-    std::string server_address("0.0.0.0:50052");
+    int port = chat::common::ConfigManager::GetInstance().GetInt("server.grpc_port", 50052);
+    std::string server_address("0.0.0.0:" + std::to_string(port));
     LOG_INFO("Message Service listening on " + server_address);
 
     // 阻塞线程模拟服务器运行
@@ -23,17 +25,27 @@ void StartMessageGrpcServer() {
 }
 
 int main() {
-    // 1. 初始化日志
-    chat::common::Logger::GetInstance().Init("message.log", "info");
+    // 1) 加载配置
+    const std::string config_path = "message/config/message_config.yaml";
+    if (!chat::common::ConfigManager::GetInstance().Load(config_path)) {
+        chat::common::Logger::GetInstance().Init("logs/message.log", "info");
+        LOG_ERROR("Failed to load config: " + config_path);
+        return -1;
+    }
+
+    // 2) 初始化日志
+    const std::string log_file = chat::common::ConfigManager::GetInstance().GetString("log.file", "logs/message.log");
+    const std::string log_level = chat::common::ConfigManager::GetInstance().GetString("log.level", "info");
+    chat::common::Logger::GetInstance().Init(log_file, log_level);
     LOG_INFO("Starting Chat System Message Service...");
 
-    // 2. 初始化核心同步服务 (连接 MySQL 与 MongoDB)
+    // 3. 初始化核心同步服务 (连接 MySQL 与 MongoDB)
     if (!MessageSync::GetInstance().Init()) {
         LOG_ERROR("Failed to initialize MessageSync (DB connections failed)");
         return -1;
     }
 
-    // 3. 模拟接收上游 Logic Server 的 SaveMsgReq
+    // 4. 模拟接收上游 Logic Server 的 SaveMsgReq
     std::thread save_simulator([]() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
         
@@ -50,7 +62,7 @@ int main() {
         LOG_INFO("SaveMessage Simulation Completed. Allocated SeqID: " + new_seq_id);
     });
 
-    // 4. 模拟接收 Gateway 离线同步请求 PullOfflineMsgReq
+    // 5. 模拟接收 Gateway 离线同步请求 PullOfflineMsgReq
     std::thread pull_simulator([]() {
         std::this_thread::sleep_for(std::chrono::seconds(3));
         
@@ -65,7 +77,7 @@ int main() {
         }
     });
 
-    // 5. 启动 gRPC 服务
+    // 6. 启动 gRPC 服务
     try {
         StartMessageGrpcServer();
     } catch (const std::exception& e) {
