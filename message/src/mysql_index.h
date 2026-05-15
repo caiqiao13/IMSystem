@@ -1,17 +1,12 @@
 #pragma once
 #include <string>
 #include <vector>
-#include "logic_chat_msg.h" // Ensure logic_chat_msg.h is available or create a MsgIndex struct
+#include "model/msg_model.h"
 
 namespace chat::message {
 
-struct MsgIndex {
-    std::string msg_id;
-    uint64_t sender_id;
-    uint64_t receiver_id;
-    int session_type;
-};
-
+// MysqlIndex 现在作为 Facade，委托给 MsgIndexDao
+// 保持原有接口不变，兼容现有调用方
 class MysqlIndex {
 public:
     static MysqlIndex& GetInstance();

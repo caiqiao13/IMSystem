@@ -45,6 +45,12 @@ int main() {
         return -1;
     }
 
+    // 3.5 初始化 AuthManager (初始化 MySQL 连接池)
+    if (!AuthManager::GetInstance().Init()) {
+        LOG_ERROR("Failed to initialize AuthManager (MySQL connection pool failed)");
+        return -1;
+    }
+
     // 4. 模拟 Gateway 转发来的客户端登录请求
     std::thread auth_simulator([]() {
         std::this_thread::sleep_for(std::chrono::seconds(1));
@@ -73,14 +79,18 @@ int main() {
         }
     });
 
-    // 5. 启动 gRPC 服务
-    try {
-        StartUserGrpcServer();
-    } catch (const std::exception& e) {
-        LOG_ERROR("User Service Exception: " + std::string(e.what()));
-        return -1;
-    }
+    // 5. 启动 gRPC 服务（后台线程常驻，便于主线程在退出前正确 join 模拟线程）
+    std::thread grpc_thread([]() {
+        try {
+            StartUserGrpcServer();
+        } catch (const std::exception& e) {
+            LOG_ERROR("User Service Exception: " + std::string(e.what()));
+        }
+    });
 
     auth_simulator.join();
+
+    // 与原先在主线程中调用 StartUserGrpcServer 一致：服务常驻；模拟线程已正确 join
+    grpc_thread.join();
     return 0;
 }

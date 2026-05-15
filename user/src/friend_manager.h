@@ -5,7 +5,7 @@
 
 namespace chat::user {
 
-// 模拟 UserInfo 结构
+// 模拟 UserInfo 结构 (保持向后兼容)
 struct UserInfoModel {
     uint64_t user_id;
     std::string nickname;
@@ -13,14 +13,13 @@ struct UserInfoModel {
     int32_t status;
 };
 
+// FriendManager 现在作为 Facade，委托给 FriendService
+// 保持原有接口不变，兼容现有调用方
 class FriendManager {
 public:
     static FriendManager& GetInstance();
 
-    // 申请添加好友 (暂不考虑复杂的通过同意流程，假设单向关注即可聊天)
     bool AddFriend(uint64_t user_id, uint64_t target_user_id, const std::string& verify_msg);
-
-    // 分页获取好友列表
     std::vector<UserInfoModel> GetFriendList(uint64_t user_id, int page, int page_size, int& total_count);
 
 private:

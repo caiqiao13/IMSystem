@@ -4,26 +4,26 @@
 #include <cstdint>
 #include "chat_handler.h"
 
-namespace chat::message {
+namespace chat::message::service {
 
-// MessageSync 现在作为 Facade，委托给 MessageService
-// 保持原有接口不变，兼容现有调用方
-class MessageSync {
+class MessageService {
 public:
-    static MessageSync& GetInstance();
+    static MessageService& GetInstance();
 
     bool Init();
 
+    // 存储消息 (上游 Logic 服务调用)
     std::string SaveMessage(const logic::LogicChatMsg& msg);
 
+    // 拉取离线消息
     std::vector<logic::LogicChatMsg> PullOfflineMessages(
         uint64_t user_id,
         const std::string& begin_seq,
         int limit);
 
 private:
-    MessageSync() = default;
-    ~MessageSync() = default;
+    MessageService() = default;
+    ~MessageService() = default;
 };
 
-} // namespace chat::message
+} // namespace chat::message::service

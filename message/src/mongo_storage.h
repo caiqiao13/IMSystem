@@ -1,16 +1,12 @@
 #pragma once
 #include <string>
 #include <vector>
+#include "model/msg_model.h"
 
 namespace chat::message {
 
-struct MsgBody {
-    std::string msg_id;
-    std::string content;
-    int msg_type;
-    int session_type;
-};
-
+// MongoStorage 现在作为 Facade，委托给 MsgBodyDao
+// 保持原有接口不变，兼容现有调用方
 class MongoStorage {
 public:
     static MongoStorage& GetInstance();

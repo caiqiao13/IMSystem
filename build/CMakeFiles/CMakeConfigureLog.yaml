@@ -35,7 +35,10 @@ events:
     found: "C:/Program Files/CMake/share/cmake-4.3/Modules/CMakeCXXCompilerId.cpp.in"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -53,6 +56,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -77,9 +81,9 @@ events:
       The output was:
       0
       閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-      鐢熸垚鍚姩鏃堕棿涓?2026/4/10 14:35:38銆?
+      鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:56:37銆?
       
-      鑺傜偣 1 涓婄殑椤圭洰鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
+      鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)銆?
       PrepareForBuild:
         姝ｅ湪鍒涘缓鐩綍鈥淒ebug\\鈥濄€?
         宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
@@ -92,7 +96,7 @@ events:
         CMakeCXXCompilerId.cpp
       Link:
         C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:".\\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\\CompilerIdCXX.lib" /MACHINE:X64 Debug\\CMakeCXXCompilerId.obj
-        CompilerIdCXX.vcxproj -> C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.exe
+        CompilerIdCXX.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.exe
       PostBuildEvent:
         for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
         :VCEnd
@@ -100,13 +104,13 @@ events:
       FinalizeBuildStatus:
         姝ｅ湪鍒犻櫎鏂囦欢鈥淒ebug\\CompilerIdCXX.tlog\\unsuccessfulbuild鈥濄€?
         姝ｅ湪瀵光€淒ebug\\CompilerIdCXX.tlog\\CompilerIdCXX.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-      宸插畬鎴愮敓鎴愰」鐩€淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+      宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\4.3.1\\CompilerIdCXX\\CompilerIdCXX.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
       
       宸叉垚鍔熺敓鎴愩€?
           0 涓鍛?
           0 涓敊璇?
       
-      宸茬敤鏃堕棿 00:00:01.07
+      宸茬敤鏃堕棿 00:00:01.38
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -114,7 +118,7 @@ events:
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
       
       The CXX compiler identification is MSVC, found in:
-        C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/4.3.1/CompilerIdCXX/CompilerIdCXX.exe
+        D:/1/chat-system/build/CMakeFiles/4.3.1/CompilerIdCXX/CompilerIdCXX.exe
       
   -
     kind: "find-v1"
@@ -139,7 +143,9 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -156,6 +162,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -169,7 +176,10 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -187,6 +197,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -218,7 +229,9 @@ events:
       - "lld-link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -235,6 +248,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -247,9 +261,15 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
+      - "C:/Program Files/7-Zip/lld-link.com"
+      - "C:/Program Files/7-Zip/lld-link.exe"
+      - "C:/Program Files/7-Zip/lld-link"
       - "C:/Program Files/PowerShell/7/lld-link.com"
       - "C:/Program Files/PowerShell/7/lld-link.exe"
       - "C:/Program Files/PowerShell/7/lld-link"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/lld-link.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/lld-link.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/lld-link"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.com"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link.exe"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/lld-link"
@@ -298,6 +318,9 @@ events:
       - "C:/Program Files/CMake/bin/lld-link.com"
       - "C:/Program Files/CMake/bin/lld-link.exe"
       - "C:/Program Files/CMake/bin/lld-link"
+      - "C:/ProgramData/chocolatey/bin/lld-link.com"
+      - "C:/ProgramData/chocolatey/bin/lld-link.exe"
+      - "C:/ProgramData/chocolatey/bin/lld-link"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/lld-link.com"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/lld-link.exe"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/lld-link"
@@ -325,7 +348,10 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -343,6 +369,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -372,7 +399,9 @@ events:
       - "link"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -389,6 +418,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -402,7 +432,10 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/link.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -420,6 +453,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -449,7 +483,9 @@ events:
       - "mt"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -466,6 +502,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -478,9 +515,15 @@ events:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.com"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt.exe"
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/mt"
+      - "C:/Program Files/7-Zip/mt.com"
+      - "C:/Program Files/7-Zip/mt.exe"
+      - "C:/Program Files/7-Zip/mt"
       - "C:/Program Files/PowerShell/7/mt.com"
       - "C:/Program Files/PowerShell/7/mt.exe"
       - "C:/Program Files/PowerShell/7/mt"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/mt.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/mt.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/mt"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.com"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt.exe"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/mt"
@@ -529,6 +572,9 @@ events:
       - "C:/Program Files/CMake/bin/mt.com"
       - "C:/Program Files/CMake/bin/mt.exe"
       - "C:/Program Files/CMake/bin/mt"
+      - "C:/ProgramData/chocolatey/bin/mt.com"
+      - "C:/ProgramData/chocolatey/bin/mt.exe"
+      - "C:/ProgramData/chocolatey/bin/mt"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/mt.com"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/mt.exe"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/mt"
@@ -556,7 +602,10 @@ events:
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -574,6 +623,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -603,7 +653,9 @@ events:
       - "lib"
     candidate_directories:
       - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -620,6 +672,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -633,7 +686,10 @@ events:
     found: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lib.exe"
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -651,6 +707,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -682,7 +739,9 @@ events:
     names:
       - "rc"
     candidate_directories:
+      - "C:/Program Files/7-Zip/"
       - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
       - "C:/Windows/System32/"
       - "C:/Windows/"
@@ -699,6 +758,7 @@ events:
       - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
       - "C:/Program Files/dotnet/"
       - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
       - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
@@ -716,13 +776,19 @@ events:
       - "C:/Program Files/CMake/bin/"
       - "C:/Program Files/CMake/sbin/"
       - "C:/Program Files/CMake/"
-      - "C:/Program Files (x86)/ChatSystem/bin/"
-      - "C:/Program Files (x86)/ChatSystem/sbin/"
-      - "C:/Program Files (x86)/ChatSystem/"
+      - "C:/Program Files/ChatSystem/bin/"
+      - "C:/Program Files/ChatSystem/sbin/"
+      - "C:/Program Files/ChatSystem/"
     searched_directories:
+      - "C:/Program Files/7-Zip/rc.com"
+      - "C:/Program Files/7-Zip/rc.exe"
+      - "C:/Program Files/7-Zip/rc"
       - "C:/Program Files/PowerShell/7/rc.com"
       - "C:/Program Files/PowerShell/7/rc.exe"
       - "C:/Program Files/PowerShell/7/rc"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/rc.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/rc.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/rc"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.com"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc.exe"
       - "C:/Program Files (x86)/VMware/VMware Workstation/bin/rc"
@@ -771,6 +837,9 @@ events:
       - "C:/Program Files/CMake/bin/rc.com"
       - "C:/Program Files/CMake/bin/rc.exe"
       - "C:/Program Files/CMake/bin/rc"
+      - "C:/ProgramData/chocolatey/bin/rc.com"
+      - "C:/ProgramData/chocolatey/bin/rc.exe"
+      - "C:/ProgramData/chocolatey/bin/rc"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/rc.com"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/rc.exe"
       - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/rc"
@@ -822,19 +891,22 @@ events:
       - "C:/Program Files/CMake/rc.com"
       - "C:/Program Files/CMake/rc.exe"
       - "C:/Program Files/CMake/rc"
-      - "C:/Program Files (x86)/ChatSystem/bin/rc.com"
-      - "C:/Program Files (x86)/ChatSystem/bin/rc.exe"
-      - "C:/Program Files (x86)/ChatSystem/bin/rc"
-      - "C:/Program Files (x86)/ChatSystem/sbin/rc.com"
-      - "C:/Program Files (x86)/ChatSystem/sbin/rc.exe"
-      - "C:/Program Files (x86)/ChatSystem/sbin/rc"
-      - "C:/Program Files (x86)/ChatSystem/rc.com"
-      - "C:/Program Files (x86)/ChatSystem/rc.exe"
-      - "C:/Program Files (x86)/ChatSystem/rc"
+      - "C:/Program Files/ChatSystem/bin/rc.com"
+      - "C:/Program Files/ChatSystem/bin/rc.exe"
+      - "C:/Program Files/ChatSystem/bin/rc"
+      - "C:/Program Files/ChatSystem/sbin/rc.com"
+      - "C:/Program Files/ChatSystem/sbin/rc.exe"
+      - "C:/Program Files/ChatSystem/sbin/rc"
+      - "C:/Program Files/ChatSystem/rc.com"
+      - "C:/Program Files/ChatSystem/rc.exe"
+      - "C:/Program Files/ChatSystem/rc"
     found: false
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -852,6 +924,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -860,12 +933,12 @@ events:
         - "C:\\Users\\13\\.dotnet\\tools"
         - "C:\\Users\\13\\Desktop\\chat-system"
         - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ChatSystem"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/ChatSystem"
+        - "C:/Program Files/ChatSystem"
   -
     kind: "try_compile-v1"
     backtrace:
@@ -875,8 +948,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-61829v"
-      binary: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-61829v"
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9zwph4"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9zwph4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -887,39 +960,39 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-61829v'
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9zwph4'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_8e357.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6cfea.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/4/10 14:35:39銆?
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:56:39銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61829v\\cmTC_8e357.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9zwph4\\cmTC_6cfea.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61829v\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_8e357.dir\\Debug\\cmTC_8e357.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9zwph4\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_6cfea.dir\\Debug\\cmTC_6cfea.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_8e357.dir\\Debug\\cmTC_8e357.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_8e357.dir\\Debug\\cmTC_8e357.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_6cfea.dir\\Debug\\cmTC_6cfea.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_6cfea.dir\\Debug\\cmTC_6cfea.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_8e357.dir\\Debug\\\\" /Fd"cmTC_8e357.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_6cfea.dir\\Debug\\\\" /Fd"cmTC_6cfea.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_8e357.dir\\Debug\\\\" /Fd"cmTC_8e357.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_6cfea.dir\\Debug\\\\" /Fd"cmTC_6cfea.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.3\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61829v\\Debug\\cmTC_8e357.exe" /INCREMENTAL /ILK:"cmTC_8e357.dir\\Debug\\cmTC_8e357.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-61829v/Debug/cmTC_8e357.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-61829v/Debug/cmTC_8e357.lib" /MACHINE:X64  /machine:x64 cmTC_8e357.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_8e357.vcxproj -> C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61829v\\Debug\\cmTC_8e357.exe
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9zwph4\\Debug\\cmTC_6cfea.exe" /INCREMENTAL /ILK:"cmTC_6cfea.dir\\Debug\\cmTC_6cfea.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9zwph4/Debug/cmTC_6cfea.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9zwph4/Debug/cmTC_6cfea.lib" /MACHINE:X64  /machine:x64 cmTC_6cfea.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_6cfea.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9zwph4\\Debug\\cmTC_6cfea.exe
         FinalizeBuildStatus:
-          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_8e357.dir\\Debug\\cmTC_8e357.tlog\\unsuccessfulbuild鈥濄€?
-          姝ｅ湪瀵光€渃mTC_8e357.dir\\Debug\\cmTC_8e357.tlog\\cmTC_8e357.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
-        宸插畬鎴愮敓鎴愰」鐩€淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-61829v\\cmTC_8e357.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_6cfea.dir\\Debug\\cmTC_6cfea.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_6cfea.dir\\Debug\\cmTC_6cfea.tlog\\cmTC_6cfea.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9zwph4\\cmTC_6cfea.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
         
         宸叉垚鍔熺敓鎴愩€?
             0 涓鍛?
             0 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.98
+        宸茬敤鏃堕棿 00:00:00.93
         
       exitCode: 0
   -
@@ -957,12 +1030,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckCXXSourceCompiles.cmake:103 (cmake_check_source_compiles)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:162 (check_cxx_source_compiles)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:226 (_threads_check_libc)"
-      - "CMakeLists.txt:45 (find_package)"
+      - "CMakeLists.txt:48 (find_package)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-1ks2v6"
-      binary: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-1ks2v6"
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-c0c1l1"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-c0c1l1"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -972,47 +1045,47 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-1ks2v6'
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-c0c1l1'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f2dcf.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c7a26.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/4/10 14:35:41銆?
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:56:41銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_f2dcf.dir\\Debug\\cmTC_f2dcf.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_c7a26.dir\\Debug\\cmTC_c7a26.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_f2dcf.dir\\Debug\\cmTC_f2dcf.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_f2dcf.dir\\Debug\\cmTC_f2dcf.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_c7a26.dir\\Debug\\cmTC_c7a26.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_c7a26.dir\\Debug\\cmTC_c7a26.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ComputeStdModulesCompileInputs:
           姝ｅ湪璇诲彇涓哄簱 'microsoft/STL'鎻愪緵鏁版嵁鐨勫簱娓呭崟鏂囦欢 'C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json'銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
         MakeDirsForCl:
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.dir\\Debug\\microsoft\\STL鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.dir\\Debug\\microsoft\\STL鈥濄€?
         SetModuleDependencies:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_f2dcf.dir\\Debug\\cmTC_f2dcf_MD.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_c7a26.dir\\Debug\\cmTC_c7a26_MD.tlog\\鈥濄€?
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_f2dcf.dir\\Debug\\\\" /Fd"cmTC_f2dcf.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\src.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_c7a26.dir\\Debug\\\\" /Fd"cmTC_c7a26.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\src.cxx"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_f2dcf.dir\\Debug\\\\" /Fd"cmTC_f2dcf.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\src.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_c7a26.dir\\Debug\\\\" /Fd"cmTC_c7a26.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\src.cxx"
           src.cxx
-        C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+        D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.vcxproj鈥?榛樿鐩爣) (1) ->
         (ClCompile 鐩爣) -> 
-          C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-1ks2v6\\cmTC_f2dcf.vcxproj]
+          D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\src.cxx(1,10): error C1083: 鏃犳硶鎵撳紑鍖呮嫭鏂囦欢: 鈥減thread.h鈥? No such file or directory [D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-c0c1l1\\cmTC_c7a26.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.64
+        宸茬敤鏃堕棿 00:00:00.60
         
       exitCode: 1
   -
@@ -1021,12 +1094,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake:154 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:175 (check_library_exists)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:238 (_threads_check_lib)"
-      - "CMakeLists.txt:45 (find_package)"
+      - "CMakeLists.txt:48 (find_package)"
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-tsw6wn"
-      binary: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-tsw6wn"
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-k85rcp"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-k85rcp"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1036,49 +1109,49 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-tsw6wn'
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-k85rcp'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_a0405.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_5996d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/4/10 14:35:42銆?
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:56:42銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a0405.dir\\Debug\\cmTC_a0405.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_5996d.dir\\Debug\\cmTC_5996d.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_a0405.dir\\Debug\\cmTC_a0405.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_a0405.dir\\Debug\\cmTC_a0405.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_5996d.dir\\Debug\\cmTC_5996d.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_5996d.dir\\Debug\\cmTC_5996d.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ComputeStdModulesCompileInputs:
           姝ｅ湪璇诲彇涓哄簱 'microsoft/STL'鎻愪緵鏁版嵁鐨勫簱娓呭崟鏂囦欢 'C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json'銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
         MakeDirsForCl:
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.dir\\Debug\\microsoft\\STL鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.dir\\Debug\\microsoft\\STL鈥濄€?
         SetModuleDependencies:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_a0405.dir\\Debug\\cmTC_a0405_MD.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_5996d.dir\\Debug\\cmTC_5996d_MD.tlog\\鈥濄€?
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_a0405.dir\\Debug\\\\" /Fd"cmTC_a0405.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_5996d.dir\\Debug\\\\" /Fd"cmTC_5996d.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\CheckFunctionExists.cxx"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_a0405.dir\\Debug\\\\" /Fd"cmTC_a0405.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_5996d.dir\\Debug\\\\" /Fd"cmTC_5996d.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\Debug\\cmTC_a0405.exe" /INCREMENTAL /ILK:"cmTC_a0405.dir\\Debug\\cmTC_a0405.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-tsw6wn/Debug/cmTC_a0405.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-tsw6wn/Debug/cmTC_a0405.lib" /MACHINE:X64  /machine:x64 cmTC_a0405.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\Debug\\cmTC_5996d.exe" /INCREMENTAL /ILK:"cmTC_5996d.dir\\Debug\\cmTC_5996d.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-k85rcp/Debug/cmTC_5996d.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-k85rcp/Debug/cmTC_5996d.lib" /MACHINE:X64  /machine:x64 cmTC_5996d.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tsw6wn\\cmTC_a0405.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減threads.lib鈥?[D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-k85rcp\\cmTC_5996d.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.79
+        宸茬敤鏃堕棿 00:00:00.75
         
       exitCode: 1
   -
@@ -1087,12 +1160,12 @@ events:
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckLibraryExists.cmake:154 (try_compile)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:175 (check_library_exists)"
       - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindThreads.cmake:239 (_threads_check_lib)"
-      - "CMakeLists.txt:45 (find_package)"
+      - "CMakeLists.txt:48 (find_package)"
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-t2xjqq"
-      binary: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-t2xjqq"
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-b4957j"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-b4957j"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -1102,57 +1175,56 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-t2xjqq'
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-b4957j'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_74596.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_73329.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
-        鐢熸垚鍚姩鏃堕棿涓?2026/4/10 14:35:43銆?
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:56:43銆?
         
-        鑺傜偣 1 涓婄殑椤圭洰鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.vcxproj鈥?榛樿鐩爣)銆?
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.vcxproj鈥?榛樿鐩爣)銆?
         PrepareForBuild:
           宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\Debug\\鈥濄€?
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_74596.dir\\Debug\\cmTC_74596.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_73329.dir\\Debug\\cmTC_73329.tlog\\鈥濄€?
         InitializeBuildStatus:
-          姝ｅ湪鍒涘缓鈥渃mTC_74596.dir\\Debug\\cmTC_74596.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
-          姝ｅ湪瀵光€渃mTC_74596.dir\\Debug\\cmTC_74596.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+          姝ｅ湪鍒涘缓鈥渃mTC_73329.dir\\Debug\\cmTC_73329.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_73329.dir\\Debug\\cmTC_73329.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
         ComputeStdModulesCompileInputs:
           姝ｅ湪璇诲彇涓哄簱 'microsoft/STL'鎻愪緵鏁版嵁鐨勫簱娓呭崟鏂囦欢 'C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\modules.json'銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
           姝ｅ湪浠庡簱鈥渕icrosoft/STL鈥濇坊鍔犳ā鍧楁簮鈥淐:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\modules\\std.compat.ixx鈥濓紝浠ヤ娇鐢ㄦ椤圭洰鐢熸垚銆?
         MakeDirsForCl:
-          姝ｅ湪鍒涘缓鐩綍鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.dir\\Debug\\microsoft\\STL鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.dir\\Debug\\microsoft\\STL鈥濄€?
         SetModuleDependencies:
-          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_74596.dir\\Debug\\cmTC_74596_MD.tlog\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_73329.dir\\Debug\\cmTC_73329_MD.tlog\\鈥濄€?
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_74596.dir\\Debug\\\\" /Fd"cmTC_74596.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\CheckFunctionExists.cxx"
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_73329.dir\\Debug\\\\" /Fd"cmTC_73329.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\CheckFunctionExists.cxx"
           鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
           鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
-          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_74596.dir\\Debug\\\\" /Fd"cmTC_74596.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\CheckFunctionExists.cxx"
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /std:c++20 /Fo"cmTC_73329.dir\\Debug\\\\" /Fd"cmTC_73329.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\CheckFunctionExists.cxx"
           CheckFunctionExists.cxx
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\Debug\\cmTC_74596.exe" /INCREMENTAL /ILK:"cmTC_74596.dir\\Debug\\cmTC_74596.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-t2xjqq/Debug/cmTC_74596.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-t2xjqq/Debug/cmTC_74596.lib" /MACHINE:X64  /machine:x64 cmTC_74596.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.vcxproj]
-        宸插畬鎴愮敓鎴愰」鐩€淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\Debug\\cmTC_73329.exe" /INCREMENTAL /ILK:"cmTC_73329.dir\\Debug\\cmTC_73329.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-b4957j/Debug/cmTC_73329.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-b4957j/Debug/cmTC_73329.lib" /MACHINE:X64  /machine:x64 cmTC_73329.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.vcxproj]
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.vcxproj鈥?榛樿鐩爣)鐨勬搷浣?- 澶辫触銆?
         
         鐢熸垚澶辫触銆?
         
-        鈥淐:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.vcxproj鈥?榛樿鐩爣) (1) ->
+        鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.vcxproj鈥?榛樿鐩爣) (1) ->
         (Link 鐩爣) -> 
-          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[C:\\Users\\13\\Desktop\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-t2xjqq\\cmTC_74596.vcxproj]
+          LINK : fatal error LNK1104: 鏃犳硶鎵撳紑鏂囦欢鈥減thread.lib鈥?[D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-b4957j\\cmTC_73329.vcxproj]
         
             0 涓鍛?
             1 涓敊璇?
         
-        宸茬敤鏃堕棿 00:00:00.80
+        宸茬敤鏃堕棿 00:00:00.76
         
       exitCode: 1
   -
     kind: "find_package-v1"
     backtrace:
-      - "cmake/Dependencies.cmake:9 (find_package)"
-      - "cmake/Dependencies.cmake:16 (_chat_try_find)"
-      - "CMakeLists.txt:51 (include)"
+      - "cmake/Dependencies.cmake:16 (find_package)"
+      - "CMakeLists.txt:54 (include)"
     name: "spdlog"
     configs:
       -
@@ -1188,19 +1260,35 @@ events:
         CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
     candidates:
       -
-        path: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/pkgRedirects/spdlogConfig.cmake"
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/spdlogConfig.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/pkgRedirects/spdlog-config.cmake"
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/spdlog-config.cmake"
         mode: "config"
         reason: "no_exist"
       -
-        path: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/pkgRedirects/lib/cps/spdlog.cps"
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/lib/cps/spdlog.cps"
         mode: "cps"
         reason: "no_exist"
       -
-        path: "C:/Users/13/Desktop/1/chat-system/build/CMakeFiles/pkgRedirects/share/cps/spdlog.cps"
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/share/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/spdlogConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/spdlog-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/lib/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/share/cps/spdlog.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1217,6 +1305,22 @@ events:
         reason: "no_exist"
       -
         path: "C:/Program Files/PowerShell/7/share/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/spdlogConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/spdlog-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/lib/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/share/cps/spdlog.cps"
         mode: "cps"
         reason: "no_exist"
       -
@@ -1476,6 +1580,22 @@ events:
         mode: "cps"
         reason: "no_exist"
       -
+        path: "C:/ProgramData/chocolatey/spdlogConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/spdlog-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/lib/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/share/cps/spdlog.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
         path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/spdlogConfig.cmake"
         mode: "config"
         reason: "no_exist"
@@ -1614,7 +1734,10 @@ events:
     found: null
     search_context:
       ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
         - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
         - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
@@ -1632,6 +1755,7 @@ events:
         - "C:\\Program Files\\dotnet\\"
         - "C:\\Program Files\\CMake\\bin"
         - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
         - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
         - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -1640,12 +1764,2209 @@ events:
         - "C:\\Users\\13\\.dotnet\\tools"
         - "C:\\Users\\13\\Desktop\\chat-system"
         - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
-      CMAKE_INSTALL_PREFIX: "C:/Program Files (x86)/ChatSystem"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
       CMAKE_SYSTEM_PREFIX_PATH:
         - "C:/Program Files"
         - "C:/Program Files (x86)"
         - "C:/Program Files/CMake"
-        - "C:/Program Files (x86)/ChatSystem"
+        - "C:/Program Files/ChatSystem"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FindGit.cmake:111 (find_program)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:1887 (find_package)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:1622 (__FetchContent_populateSubbuild)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:2158:EVAL:2 (__FetchContent_doPopulation)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:2158 (cmake_language)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/FetchContent.cmake:2399 (__FetchContent_Populate)"
+      - "cmake/Dependencies.cmake:33 (FetchContent_MakeAvailable)"
+      - "CMakeLists.txt:54 (include)"
+    mode: "program"
+    variable: "GIT_EXECUTABLE"
+    description: "Git command line client"
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "git.cmd"
+      - "git"
+    candidate_directories:
+      - "C:/Program Files/7-Zip/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/VisualSVN Server/bin/"
+      - "C:/Program Files/cursor/resources/app/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/13/.dotnet/tools/"
+      - "C:/Users/13/Desktop/chat-system/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/ChatSystem/bin/"
+      - "C:/Program Files/ChatSystem/sbin/"
+      - "C:/Program Files/ChatSystem/"
+      - "C:/Users/13/AppData/Local/Atlassian/SourceTree/git_local/bin/"
+    searched_directories:
+      - "C:/Program Files/7-Zip/git.cmd.com"
+      - "C:/Program Files/7-Zip/git.cmd.exe"
+      - "C:/Program Files/7-Zip/git.cmd"
+      - "C:/Program Files/PowerShell/7/git.cmd.com"
+      - "C:/Program Files/PowerShell/7/git.cmd.exe"
+      - "C:/Program Files/PowerShell/7/git.cmd"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git.cmd.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git.cmd.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git.cmd"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.cmd"
+      - "C:/Windows/System32/git.cmd.com"
+      - "C:/Windows/System32/git.cmd.exe"
+      - "C:/Windows/System32/git.cmd"
+      - "C:/Windows/git.cmd.com"
+      - "C:/Windows/git.cmd.exe"
+      - "C:/Windows/git.cmd"
+      - "C:/Windows/System32/wbem/git.cmd.com"
+      - "C:/Windows/System32/wbem/git.cmd.exe"
+      - "C:/Windows/System32/wbem/git.cmd"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.cmd"
+      - "C:/Windows/System32/OpenSSH/git.cmd.com"
+      - "C:/Windows/System32/OpenSSH/git.cmd.exe"
+      - "C:/Windows/System32/OpenSSH/git.cmd"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd.com"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd.exe"
+      - "C:/Program Files/TortoiseSVN/bin/git.cmd"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git.cmd.com"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git.cmd.exe"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git.cmd"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git.cmd.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git.cmd.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git.cmd"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git.cmd.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git.cmd.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git.cmd"
+      - "C:/Program Files/VisualSVN Server/bin/git.cmd.com"
+      - "C:/Program Files/VisualSVN Server/bin/git.cmd.exe"
+      - "C:/Program Files/VisualSVN Server/bin/git.cmd"
+      - "C:/Program Files/cursor/resources/app/bin/git.cmd.com"
+      - "C:/Program Files/cursor/resources/app/bin/git.cmd.exe"
+      - "C:/Program Files/cursor/resources/app/bin/git.cmd"
+      - "C:/Program Files/Git/cmd/git.cmd.com"
+      - "C:/Program Files/Git/cmd/git.cmd.exe"
+      - "C:/Program Files/Git/cmd/git.cmd"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/git.cmd"
+      - "C:/Program Files/dotnet/git.cmd.com"
+      - "C:/Program Files/dotnet/git.cmd.exe"
+      - "C:/Program Files/dotnet/git.cmd"
+      - "C:/Program Files/CMake/bin/git.cmd.com"
+      - "C:/Program Files/CMake/bin/git.cmd.exe"
+      - "C:/Program Files/CMake/bin/git.cmd"
+      - "C:/ProgramData/chocolatey/bin/git.cmd.com"
+      - "C:/ProgramData/chocolatey/bin/git.cmd.exe"
+      - "C:/ProgramData/chocolatey/bin/git.cmd"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/git.cmd.com"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/git.cmd.exe"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/git.cmd"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/git.cmd.com"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/git.cmd.exe"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/git.cmd"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/git.cmd.com"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/git.cmd.exe"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/git.cmd"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/git.cmd.com"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/git.cmd.exe"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/git.cmd"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd.com"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd.exe"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/git.cmd"
+      - "C:/Users/13/.dotnet/tools/git.cmd.com"
+      - "C:/Users/13/.dotnet/tools/git.cmd.exe"
+      - "C:/Users/13/.dotnet/tools/git.cmd"
+      - "C:/Users/13/Desktop/chat-system/git.cmd.com"
+      - "C:/Users/13/Desktop/chat-system/git.cmd.exe"
+      - "C:/Users/13/Desktop/chat-system/git.cmd"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/git.cmd.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/git.cmd.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/git.cmd"
+      - "C:/Program Files/bin/git.cmd.com"
+      - "C:/Program Files/bin/git.cmd.exe"
+      - "C:/Program Files/bin/git.cmd"
+      - "C:/Program Files/sbin/git.cmd.com"
+      - "C:/Program Files/sbin/git.cmd.exe"
+      - "C:/Program Files/sbin/git.cmd"
+      - "C:/Program Files/git.cmd.com"
+      - "C:/Program Files/git.cmd.exe"
+      - "C:/Program Files/git.cmd"
+      - "C:/Program Files (x86)/bin/git.cmd.com"
+      - "C:/Program Files (x86)/bin/git.cmd.exe"
+      - "C:/Program Files (x86)/bin/git.cmd"
+      - "C:/Program Files (x86)/sbin/git.cmd.com"
+      - "C:/Program Files (x86)/sbin/git.cmd.exe"
+      - "C:/Program Files (x86)/sbin/git.cmd"
+      - "C:/Program Files (x86)/git.cmd.com"
+      - "C:/Program Files (x86)/git.cmd.exe"
+      - "C:/Program Files (x86)/git.cmd"
+      - "C:/Program Files/CMake/bin/git.cmd.com"
+      - "C:/Program Files/CMake/bin/git.cmd.exe"
+      - "C:/Program Files/CMake/bin/git.cmd"
+      - "C:/Program Files/CMake/sbin/git.cmd.com"
+      - "C:/Program Files/CMake/sbin/git.cmd.exe"
+      - "C:/Program Files/CMake/sbin/git.cmd"
+      - "C:/Program Files/CMake/git.cmd.com"
+      - "C:/Program Files/CMake/git.cmd.exe"
+      - "C:/Program Files/CMake/git.cmd"
+      - "C:/Program Files/ChatSystem/bin/git.cmd.com"
+      - "C:/Program Files/ChatSystem/bin/git.cmd.exe"
+      - "C:/Program Files/ChatSystem/bin/git.cmd"
+      - "C:/Program Files/ChatSystem/sbin/git.cmd.com"
+      - "C:/Program Files/ChatSystem/sbin/git.cmd.exe"
+      - "C:/Program Files/ChatSystem/sbin/git.cmd"
+      - "C:/Program Files/ChatSystem/git.cmd.com"
+      - "C:/Program Files/ChatSystem/git.cmd.exe"
+      - "C:/Program Files/ChatSystem/git.cmd"
+      - "C:/Users/13/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd.com"
+      - "C:/Users/13/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd.exe"
+      - "C:/Users/13/AppData/Local/Atlassian/SourceTree/git_local/bin/git.cmd"
+      - "C:/Program Files/7-Zip/git.com"
+      - "C:/Program Files/7-Zip/git.exe"
+      - "C:/Program Files/7-Zip/git"
+      - "C:/Program Files/PowerShell/7/git.com"
+      - "C:/Program Files/PowerShell/7/git.exe"
+      - "C:/Program Files/PowerShell/7/git"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/git"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/git"
+      - "C:/Windows/System32/git.com"
+      - "C:/Windows/System32/git.exe"
+      - "C:/Windows/System32/git"
+      - "C:/Windows/git.com"
+      - "C:/Windows/git.exe"
+      - "C:/Windows/git"
+      - "C:/Windows/System32/wbem/git.com"
+      - "C:/Windows/System32/wbem/git.exe"
+      - "C:/Windows/System32/wbem/git"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/git"
+      - "C:/Windows/System32/OpenSSH/git.com"
+      - "C:/Windows/System32/OpenSSH/git.exe"
+      - "C:/Windows/System32/OpenSSH/git"
+      - "C:/Program Files/TortoiseSVN/bin/git.com"
+      - "C:/Program Files/TortoiseSVN/bin/git.exe"
+      - "C:/Program Files/TortoiseSVN/bin/git"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git.com"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git.exe"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/git"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/git"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/git"
+      - "C:/Program Files/VisualSVN Server/bin/git.com"
+      - "C:/Program Files/VisualSVN Server/bin/git.exe"
+      - "C:/Program Files/VisualSVN Server/bin/git"
+      - "C:/Program Files/cursor/resources/app/bin/git.com"
+      - "C:/Program Files/cursor/resources/app/bin/git.exe"
+      - "C:/Program Files/cursor/resources/app/bin/git"
+      - "C:/Program Files/Git/cmd/git.com"
+    found: "C:/Program Files/Git/cmd/git.exe"
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files (x86)\\NetSarang\\Xshell 8\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\VisualSVN Server\\bin"
+        - "C:\\Program Files\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.8\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\13\\.dotnet\\tools"
+        - "C:\\Users\\13\\Desktop\\chat-system"
+        - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/ChatSystem"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "cmake/Dependencies.cmake:44 (find_package)"
+      - "CMakeLists.txt:54 (include)"
+    name: "jsoncpp"
+    configs:
+      -
+        filename: "jsoncpp.cps"
+        kind: "cps"
+      -
+        filename: "jsoncppConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "jsoncpp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "jsoncpp"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/jsoncppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/jsoncpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/lib/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/share/cps/jsoncpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files (x86)\\NetSarang\\Xshell 8\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\VisualSVN Server\\bin"
+        - "C:\\Program Files\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.8\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\13\\.dotnet\\tools"
+        - "C:\\Users\\13\\Desktop\\chat-system"
+        - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/ChatSystem"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/_deps/jsoncpp-src/CMakeLists.txt:60 (find_program)"
+    mode: "program"
+    variable: "CCACHE_EXECUTABLE"
+    description: "Path to a program."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ccache"
+    candidate_directories:
+      - "/usr/local/bin/"
+      - "/opt/local/bin/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/VisualSVN Server/bin/"
+      - "C:/Program Files/cursor/resources/app/bin/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/13/.dotnet/tools/"
+      - "C:/Users/13/Desktop/chat-system/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/"
+      - "C:/Program Files/bin/"
+      - "C:/Program Files/sbin/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/bin/"
+      - "C:/Program Files (x86)/sbin/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/Program Files/CMake/sbin/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/ChatSystem/bin/"
+      - "C:/Program Files/ChatSystem/sbin/"
+      - "C:/Program Files/ChatSystem/"
+    searched_directories:
+      - "/usr/local/bin/ccache.com"
+      - "/usr/local/bin/ccache.exe"
+      - "/usr/local/bin/ccache"
+      - "/opt/local/bin/ccache.com"
+      - "/opt/local/bin/ccache.exe"
+      - "/opt/local/bin/ccache"
+      - "C:/Program Files/7-Zip/ccache.com"
+      - "C:/Program Files/7-Zip/ccache.exe"
+      - "C:/Program Files/7-Zip/ccache"
+      - "C:/Program Files/PowerShell/7/ccache.com"
+      - "C:/Program Files/PowerShell/7/ccache.exe"
+      - "C:/Program Files/PowerShell/7/ccache"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/ccache.com"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/ccache.exe"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/ccache"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/ccache.com"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/ccache.exe"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/ccache"
+      - "C:/Windows/System32/ccache.com"
+      - "C:/Windows/System32/ccache.exe"
+      - "C:/Windows/System32/ccache"
+      - "C:/Windows/ccache.com"
+      - "C:/Windows/ccache.exe"
+      - "C:/Windows/ccache"
+      - "C:/Windows/System32/wbem/ccache.com"
+      - "C:/Windows/System32/wbem/ccache.exe"
+      - "C:/Windows/System32/wbem/ccache"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.com"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache.exe"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/ccache"
+      - "C:/Windows/System32/OpenSSH/ccache.com"
+      - "C:/Windows/System32/OpenSSH/ccache.exe"
+      - "C:/Windows/System32/OpenSSH/ccache"
+      - "C:/Program Files/TortoiseSVN/bin/ccache.com"
+      - "C:/Program Files/TortoiseSVN/bin/ccache.exe"
+      - "C:/Program Files/TortoiseSVN/bin/ccache"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/ccache.com"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/ccache.exe"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/ccache"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/ccache.com"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/ccache.exe"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/ccache"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/ccache.com"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/ccache.exe"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/ccache"
+      - "C:/Program Files/VisualSVN Server/bin/ccache.com"
+      - "C:/Program Files/VisualSVN Server/bin/ccache.exe"
+      - "C:/Program Files/VisualSVN Server/bin/ccache"
+      - "C:/Program Files/cursor/resources/app/bin/ccache.com"
+      - "C:/Program Files/cursor/resources/app/bin/ccache.exe"
+      - "C:/Program Files/cursor/resources/app/bin/ccache"
+      - "C:/Program Files/Git/cmd/ccache.com"
+      - "C:/Program Files/Git/cmd/ccache.exe"
+      - "C:/Program Files/Git/cmd/ccache"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache.com"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache.exe"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/ccache"
+      - "C:/Program Files/dotnet/ccache.com"
+      - "C:/Program Files/dotnet/ccache.exe"
+      - "C:/Program Files/dotnet/ccache"
+      - "C:/Program Files/CMake/bin/ccache.com"
+      - "C:/Program Files/CMake/bin/ccache.exe"
+      - "C:/Program Files/CMake/bin/ccache"
+      - "C:/ProgramData/chocolatey/bin/ccache.com"
+      - "C:/ProgramData/chocolatey/bin/ccache.exe"
+      - "C:/ProgramData/chocolatey/bin/ccache"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/ccache.com"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/ccache.exe"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/ccache"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/ccache.com"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/ccache.exe"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/ccache"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/ccache.com"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/ccache.exe"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/ccache"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/ccache.com"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/ccache.exe"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/ccache"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/ccache.com"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/ccache.exe"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/ccache"
+      - "C:/Users/13/.dotnet/tools/ccache.com"
+      - "C:/Users/13/.dotnet/tools/ccache.exe"
+      - "C:/Users/13/.dotnet/tools/ccache"
+      - "C:/Users/13/Desktop/chat-system/ccache.com"
+      - "C:/Users/13/Desktop/chat-system/ccache.exe"
+      - "C:/Users/13/Desktop/chat-system/ccache"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/ccache.com"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/ccache.exe"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/ccache"
+      - "C:/Program Files/bin/ccache.com"
+      - "C:/Program Files/bin/ccache.exe"
+      - "C:/Program Files/bin/ccache"
+      - "C:/Program Files/sbin/ccache.com"
+      - "C:/Program Files/sbin/ccache.exe"
+      - "C:/Program Files/sbin/ccache"
+      - "C:/Program Files/ccache.com"
+      - "C:/Program Files/ccache.exe"
+      - "C:/Program Files/ccache"
+      - "C:/Program Files (x86)/bin/ccache.com"
+      - "C:/Program Files (x86)/bin/ccache.exe"
+      - "C:/Program Files (x86)/bin/ccache"
+      - "C:/Program Files (x86)/sbin/ccache.com"
+      - "C:/Program Files (x86)/sbin/ccache.exe"
+      - "C:/Program Files (x86)/sbin/ccache"
+      - "C:/Program Files (x86)/ccache.com"
+      - "C:/Program Files (x86)/ccache.exe"
+      - "C:/Program Files (x86)/ccache"
+      - "C:/Program Files/CMake/bin/ccache.com"
+      - "C:/Program Files/CMake/bin/ccache.exe"
+      - "C:/Program Files/CMake/bin/ccache"
+      - "C:/Program Files/CMake/sbin/ccache.com"
+      - "C:/Program Files/CMake/sbin/ccache.exe"
+      - "C:/Program Files/CMake/sbin/ccache"
+      - "C:/Program Files/CMake/ccache.com"
+      - "C:/Program Files/CMake/ccache.exe"
+      - "C:/Program Files/CMake/ccache"
+      - "C:/Program Files/ChatSystem/bin/ccache.com"
+      - "C:/Program Files/ChatSystem/bin/ccache.exe"
+      - "C:/Program Files/ChatSystem/bin/ccache"
+      - "C:/Program Files/ChatSystem/sbin/ccache.com"
+      - "C:/Program Files/ChatSystem/sbin/ccache.exe"
+      - "C:/Program Files/ChatSystem/sbin/ccache"
+      - "C:/Program Files/ChatSystem/ccache.com"
+      - "C:/Program Files/ChatSystem/ccache.exe"
+      - "C:/Program Files/ChatSystem/ccache"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files (x86)\\NetSarang\\Xshell 8\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\VisualSVN Server\\bin"
+        - "C:\\Program Files\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.8\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\13\\.dotnet\\tools"
+        - "C:\\Users\\13\\Desktop\\chat-system"
+        - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/ChatSystem"
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake:143 (try_compile)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:11 (check_include_file_cxx)"
+    checks:
+      - "Looking for C++ include clocale"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-27jq58"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-27jq58"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_CLOCALE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-27jq58'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_59e60.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:20銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\cmTC_59e60.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_59e60.dir\\Debug\\cmTC_59e60.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_59e60.dir\\Debug\\cmTC_59e60.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_59e60.dir\\Debug\\cmTC_59e60.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_59e60.dir\\Debug\\\\" /Fd"cmTC_59e60.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\CheckIncludeFile.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_59e60.dir\\Debug\\\\" /Fd"cmTC_59e60.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\CheckIncludeFile.cxx"
+          CheckIncludeFile.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\Debug\\cmTC_59e60.exe" /INCREMENTAL /ILK:"cmTC_59e60.dir\\Debug\\cmTC_59e60.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-27jq58/Debug/cmTC_59e60.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-27jq58/Debug/cmTC_59e60.lib" /MACHINE:X64  /machine:x64 cmTC_59e60.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_59e60.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\Debug\\cmTC_59e60.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_59e60.dir\\Debug\\cmTC_59e60.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_59e60.dir\\Debug\\cmTC_59e60.tlog\\cmTC_59e60.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-27jq58\\cmTC_59e60.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.97
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckSymbolExists.cmake:193 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckCXXSymbolExists.cmake:105 (__CHECK_SYMBOL_EXISTS_IMPL)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:12 (check_cxx_symbol_exists)"
+    checks:
+      - "Looking for localeconv"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-xesz5s"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-xesz5s"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_LOCALECONV"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-xesz5s'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_abf70.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:21銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\cmTC_abf70.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_abf70.dir\\Debug\\cmTC_abf70.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_abf70.dir\\Debug\\cmTC_abf70.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_abf70.dir\\Debug\\cmTC_abf70.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_abf70.dir\\Debug\\\\" /Fd"cmTC_abf70.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\CheckSymbolExists.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_abf70.dir\\Debug\\\\" /Fd"cmTC_abf70.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\CheckSymbolExists.cxx"
+          CheckSymbolExists.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\Debug\\cmTC_abf70.exe" /INCREMENTAL /ILK:"cmTC_abf70.dir\\Debug\\cmTC_abf70.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-xesz5s/Debug/cmTC_abf70.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-xesz5s/Debug/cmTC_abf70.lib" /MACHINE:X64  /machine:x64 cmTC_abf70.dir\\Debug\\CheckSymbolExists.obj
+          cmTC_abf70.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\Debug\\cmTC_abf70.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_abf70.dir\\Debug\\cmTC_abf70.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_abf70.dir\\Debug\\cmTC_abf70.tlog\\cmTC_abf70.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xesz5s\\cmTC_abf70.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:00.94
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake:143 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckTypeSize.cmake:466 (check_include_file_cxx)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:15 (check_type_size)"
+    checks:
+      - "Looking for C++ include sys/types.h"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-ajqvmc"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-ajqvmc"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_SYS_TYPES_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-ajqvmc'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_c3d32.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:22銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\cmTC_c3d32.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_c3d32.dir\\Debug\\cmTC_c3d32.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_c3d32.dir\\Debug\\cmTC_c3d32.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_c3d32.dir\\Debug\\cmTC_c3d32.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_c3d32.dir\\Debug\\\\" /Fd"cmTC_c3d32.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\CheckIncludeFile.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_c3d32.dir\\Debug\\\\" /Fd"cmTC_c3d32.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\CheckIncludeFile.cxx"
+          CheckIncludeFile.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\Debug\\cmTC_c3d32.exe" /INCREMENTAL /ILK:"cmTC_c3d32.dir\\Debug\\cmTC_c3d32.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-ajqvmc/Debug/cmTC_c3d32.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-ajqvmc/Debug/cmTC_c3d32.lib" /MACHINE:X64  /machine:x64 cmTC_c3d32.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_c3d32.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\Debug\\cmTC_c3d32.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_c3d32.dir\\Debug\\cmTC_c3d32.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_c3d32.dir\\Debug\\cmTC_c3d32.tlog\\cmTC_c3d32.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ajqvmc\\cmTC_c3d32.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.18
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake:143 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckTypeSize.cmake:471 (check_include_file_cxx)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:15 (check_type_size)"
+    checks:
+      - "Looking for C++ include stdint.h"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-muv5gk"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-muv5gk"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_STDINT_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-muv5gk'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2ca78.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:24銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\cmTC_2ca78.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_2ca78.dir\\Debug\\cmTC_2ca78.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_2ca78.dir\\Debug\\cmTC_2ca78.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_2ca78.dir\\Debug\\cmTC_2ca78.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_2ca78.dir\\Debug\\\\" /Fd"cmTC_2ca78.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\CheckIncludeFile.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_2ca78.dir\\Debug\\\\" /Fd"cmTC_2ca78.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\CheckIncludeFile.cxx"
+          CheckIncludeFile.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\Debug\\cmTC_2ca78.exe" /INCREMENTAL /ILK:"cmTC_2ca78.dir\\Debug\\cmTC_2ca78.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-muv5gk/Debug/cmTC_2ca78.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-muv5gk/Debug/cmTC_2ca78.lib" /MACHINE:X64  /machine:x64 cmTC_2ca78.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_2ca78.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\Debug\\cmTC_2ca78.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_2ca78.dir\\Debug\\cmTC_2ca78.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_2ca78.dir\\Debug\\cmTC_2ca78.tlog\\cmTC_2ca78.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-muv5gk\\cmTC_2ca78.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.17
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckIncludeFileCXX.cmake:143 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckTypeSize.cmake:472 (check_include_file_cxx)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:15 (check_type_size)"
+    checks:
+      - "Looking for C++ include stddef.h"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-w30pa1"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-w30pa1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_STDDEF_H"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-w30pa1'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_cc941.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:26銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\cmTC_cc941.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_cc941.dir\\Debug\\cmTC_cc941.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_cc941.dir\\Debug\\cmTC_cc941.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_cc941.dir\\Debug\\cmTC_cc941.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_cc941.dir\\Debug\\\\" /Fd"cmTC_cc941.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\CheckIncludeFile.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_cc941.dir\\Debug\\\\" /Fd"cmTC_cc941.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\CheckIncludeFile.cxx"
+          CheckIncludeFile.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\Debug\\cmTC_cc941.exe" /INCREMENTAL /ILK:"cmTC_cc941.dir\\Debug\\cmTC_cc941.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-w30pa1/Debug/cmTC_cc941.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-w30pa1/Debug/cmTC_cc941.lib" /MACHINE:X64  /machine:x64 cmTC_cc941.dir\\Debug\\CheckIncludeFile.obj
+          cmTC_cc941.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\Debug\\cmTC_cc941.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_cc941.dir\\Debug\\cmTC_cc941.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_cc941.dir\\Debug\\cmTC_cc941.tlog\\cmTC_cc941.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-w30pa1\\cmTC_cc941.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.18
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckTypeSize.cmake:348 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckTypeSize.cmake:481 (__check_type_size_impl)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:15 (check_type_size)"
+    checks:
+      - "Check size of lconv"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9bj4gf"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9bj4gf"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_LCONV_SIZE"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9bj4gf'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_d9924.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:27銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\cmTC_d9924.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_d9924.dir\\Debug\\cmTC_d9924.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_d9924.dir\\Debug\\cmTC_d9924.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_d9924.dir\\Debug\\cmTC_d9924.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_d9924.dir\\Debug\\\\" /Fd"cmTC_d9924.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\LCONV_SIZE.cpp"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_d9924.dir\\Debug\\\\" /Fd"cmTC_d9924.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\LCONV_SIZE.cpp"
+          LCONV_SIZE.cpp
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\Debug\\cmTC_d9924.exe" /INCREMENTAL /ILK:"cmTC_d9924.dir\\Debug\\cmTC_d9924.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9bj4gf/Debug/cmTC_d9924.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-9bj4gf/Debug/cmTC_d9924.lib" /MACHINE:X64  /machine:x64 cmTC_d9924.dir\\Debug\\LCONV_SIZE.obj
+          cmTC_d9924.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\Debug\\cmTC_d9924.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_d9924.dir\\Debug\\cmTC_d9924.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_d9924.dir\\Debug\\cmTC_d9924.tlog\\cmTC_d9924.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9bj4gf\\cmTC_d9924.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.20
+        
+      exitCode: 0
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckSourceCompiles.cmake:205 (cmake_check_source_compiles)"
+      - "C:/Program Files/CMake/share/cmake-4.3/Modules/CheckStructHasMember.cmake:163 (check_source_compiles)"
+      - "build/_deps/jsoncpp-src/src/lib_json/CMakeLists.txt:17 (check_struct_has_member)"
+    checks:
+      - "Performing Test HAVE_DECIMAL_POINT"
+    directories:
+      source: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-75chr0"
+      binary: "D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-75chr0"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /GR /EHsc"
+      CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
+      CMAKE_CXX_STDLIB_MODULES_JSON: ""
+      CMAKE_EXE_LINKER_FLAGS: "/machine:x64"
+      CMAKE_MODULE_PATH: "D:/1/chat-system/cmake;D:/1/chat-system/build/_deps/jsoncpp-src/cmake"
+    buildResult:
+      variable: "HAVE_DECIMAL_POINT"
+      cached: true
+      stdout: |
+        Change Dir: 'D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-75chr0'
+        
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/18/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_bfdd7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        閫傜敤浜?.NET Framework MSBuild 鐗堟湰 18.4.0+6e61e96ac
+        鐢熸垚鍚姩鏃堕棿涓?2026/5/15 15:59:29銆?
+        
+        鑺傜偣 1 涓婄殑椤圭洰鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\cmTC_bfdd7.vcxproj鈥?榛樿鐩爣)銆?
+        PrepareForBuild:
+          宸插惎鐢ㄧ粨鏋勫寲杈撳嚭銆傜紪璇戝櫒璇婃柇鐨勬牸寮忚缃皢鍙嶆槧閿欒灞傛缁撴瀯銆傛湁鍏宠缁嗕俊鎭紝璇峰弬闃?https://aka.ms/cpp/structured-output銆?
+          姝ｅ湪鍒涘缓鐩綍鈥淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\Debug\\鈥濄€?
+          姝ｅ湪鍒涘缓鐩綍鈥渃mTC_bfdd7.dir\\Debug\\cmTC_bfdd7.tlog\\鈥濄€?
+        InitializeBuildStatus:
+          姝ｅ湪鍒涘缓鈥渃mTC_bfdd7.dir\\Debug\\cmTC_bfdd7.tlog\\unsuccessfulbuild鈥濓紝鍥犱负宸叉寚瀹氣€淎lwaysCreate鈥濄€?
+          姝ｅ湪瀵光€渃mTC_bfdd7.dir\\Debug\\cmTC_bfdd7.tlog\\unsuccessfulbuild鈥濇墽琛?Touch 浠诲姟銆?
+        ClCompile:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_DECIMAL_POINT /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_bfdd7.dir\\Debug\\\\" /Fd"cmTC_bfdd7.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\src.cxx"
+          鐢ㄤ簬 x64 鐨?Microsoft (R) C/C++ 浼樺寲缂栬瘧鍣?19.50.35728 鐗?
+          鐗堟潈鎵€鏈?C) Microsoft Corporation銆備繚鐣欐墍鏈夋潈鍒┿€?
+          cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D HAVE_DECIMAL_POINT /D _MBCS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GR /Fo"cmTC_bfdd7.dir\\Debug\\\\" /Fd"cmTC_bfdd7.dir\\Debug\\vc145.pdb" /external:W1 /TP /errorReport:queue "D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\src.cxx"
+          src.cxx
+        Link:
+          C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\Debug\\cmTC_bfdd7.exe" /INCREMENTAL /ILK:"cmTC_bfdd7.dir\\Debug\\cmTC_bfdd7.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-75chr0/Debug/cmTC_bfdd7.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"D:/1/chat-system/build/CMakeFiles/CMakeScratch/TryCompile-75chr0/Debug/cmTC_bfdd7.lib" /MACHINE:X64  /machine:x64 cmTC_bfdd7.dir\\Debug\\src.obj
+          cmTC_bfdd7.vcxproj -> D:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\Debug\\cmTC_bfdd7.exe
+        FinalizeBuildStatus:
+          姝ｅ湪鍒犻櫎鏂囦欢鈥渃mTC_bfdd7.dir\\Debug\\cmTC_bfdd7.tlog\\unsuccessfulbuild鈥濄€?
+          姝ｅ湪瀵光€渃mTC_bfdd7.dir\\Debug\\cmTC_bfdd7.tlog\\cmTC_bfdd7.lastbuildstate鈥濇墽琛?Touch 浠诲姟銆?
+        宸插畬鎴愮敓鎴愰」鐩€淒:\\1\\chat-system\\build\\CMakeFiles\\CMakeScratch\\TryCompile-75chr0\\cmTC_bfdd7.vcxproj鈥?榛樿鐩爣)鐨勬搷浣溿€?
+        
+        宸叉垚鍔熺敓鎴愩€?
+            0 涓鍛?
+            0 涓敊璇?
+        
+        宸茬敤鏃堕棿 00:00:01.32
+        
+      exitCode: 0
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "cmake/Dependencies.cmake:9 (find_package)"
+      - "cmake/Dependencies.cmake:80 (_chat_try_find)"
+      - "CMakeLists.txt:54 (include)"
+    name: "asio"
+    configs:
+      -
+        filename: "asio.cps"
+        kind: "cps"
+      -
+        filename: "asioConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "asio-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "optional"
+      quiet: true
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "asio"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "D:/1/chat-system/build/CMakeFiles/pkgRedirects/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/7-Zip/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/PowerShell/7/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/resources/helpers/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/VMware/VMware Workstation/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/wbem/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/WindowsPowerShell/v1.0/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Windows/System32/OpenSSH/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/TortoiseSVN/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/NetSarang/Xshell 8/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/VisualSVN Server/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/cursor/resources/app/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Git/cmd/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/dotnet/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/ProgramData/chocolatey/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Python/Python311/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Microsoft/WindowsApps/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/CMake/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/asioConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/asio-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/lib/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "C:/Program Files (x86)/share/cps/asio.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found: null
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files (x86)\\NetSarang\\Xshell 8\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\VisualSVN Server\\bin"
+        - "C:\\Program Files\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.8\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\13\\.dotnet\\tools"
+        - "C:\\Users\\13\\Desktop\\chat-system"
+        - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/ChatSystem"
       CMAKE_MODULE_PATH:
-        - "C:/Users/13/Desktop/1/chat-system/cmake"
-...
+        - "D:/1/chat-system/cmake"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "cmake/Dependencies.cmake:82 (find_path)"
+      - "CMakeLists.txt:54 (include)"
+    mode: "path"
+    variable: "CHAT_ASIO_INCLUDE_DIR"
+    description: "Path to a file."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "asio.hpp"
+    candidate_directories:
+      - "C:/Program Files/7-Zip/include/"
+      - "C:/Program Files/7-Zip/"
+      - "C:/Program Files/PowerShell/7/include/"
+      - "C:/Program Files/PowerShell/7/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/include/"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/include/"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/"
+      - "C:/Windows/System32/include/"
+      - "C:/Windows/System32/"
+      - "C:/Windows/include/"
+      - "C:/Windows/"
+      - "C:/Windows/System32/wbem/include/"
+      - "C:/Windows/System32/wbem/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/include/"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/"
+      - "C:/Windows/System32/OpenSSH/include/"
+      - "C:/Windows/System32/OpenSSH/"
+      - "C:/Program Files/TortoiseSVN/bin/include/"
+      - "C:/Program Files/TortoiseSVN/bin/"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/include/"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/include/"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/include/"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/"
+      - "C:/Program Files/VisualSVN Server/bin/include/"
+      - "C:/Program Files/VisualSVN Server/bin/"
+      - "C:/Program Files/cursor/resources/app/bin/include/"
+      - "C:/Program Files/cursor/resources/app/bin/"
+      - "C:/Program Files/Git/cmd/include/"
+      - "C:/Program Files/Git/cmd/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/include/"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/"
+      - "C:/Program Files/dotnet/include/"
+      - "C:/Program Files/dotnet/"
+      - "C:/Program Files/CMake/bin/include/"
+      - "C:/Program Files/CMake/bin/"
+      - "C:/ProgramData/chocolatey/bin/include/"
+      - "C:/ProgramData/chocolatey/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/include/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/include/"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/include/"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/include/"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/include/"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/"
+      - "C:/Users/13/.dotnet/tools/include/"
+      - "C:/Users/13/.dotnet/tools/"
+      - "C:/Users/13/Desktop/chat-system/include/"
+      - "C:/Users/13/Desktop/chat-system/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/include/"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/"
+      - "C:/Program Files/include/include/"
+      - "C:/Program Files/include/"
+      - "C:/Program Files/include/"
+      - "C:/Program Files/"
+      - "C:/Program Files (x86)/include/include/"
+      - "C:/Program Files (x86)/include/"
+      - "C:/Program Files (x86)/include/"
+      - "C:/Program Files (x86)/"
+      - "C:/Program Files/CMake/include/include/"
+      - "C:/Program Files/CMake/include/"
+      - "C:/Program Files/CMake/include/"
+      - "C:/Program Files/CMake/"
+      - "C:/Program Files/ChatSystem/include/include/"
+      - "C:/Program Files/ChatSystem/include/"
+      - "C:/Program Files/ChatSystem/include/"
+      - "C:/Program Files/ChatSystem/"
+    searched_directories:
+      - "C:/Program Files/7-Zip/include/asio.hpp"
+      - "C:/Program Files/7-Zip/asio.hpp"
+      - "C:/Program Files/PowerShell/7/include/asio.hpp"
+      - "C:/Program Files/PowerShell/7/asio.hpp"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/include/asio.hpp"
+      - "C:/Program Files/cursor/resources/app/resources/helpers/asio.hpp"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/include/asio.hpp"
+      - "C:/Program Files (x86)/VMware/VMware Workstation/bin/asio.hpp"
+      - "C:/Windows/System32/include/asio.hpp"
+      - "C:/Windows/System32/asio.hpp"
+      - "C:/Windows/include/asio.hpp"
+      - "C:/Windows/asio.hpp"
+      - "C:/Windows/System32/wbem/include/asio.hpp"
+      - "C:/Windows/System32/wbem/asio.hpp"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/include/asio.hpp"
+      - "C:/Windows/System32/WindowsPowerShell/v1.0/asio.hpp"
+      - "C:/Windows/System32/OpenSSH/include/asio.hpp"
+      - "C:/Windows/System32/OpenSSH/asio.hpp"
+      - "C:/Program Files/TortoiseSVN/bin/include/asio.hpp"
+      - "C:/Program Files/TortoiseSVN/bin/asio.hpp"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/include/asio.hpp"
+      - "C:/Program Files (x86)/NetSarang/Xshell 8/asio.hpp"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/include/asio.hpp"
+      - "C:/Program Files/Microsoft SQL Server/170/Tools/Binn/asio.hpp"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/include/asio.hpp"
+      - "C:/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/asio.hpp"
+      - "C:/Program Files/VisualSVN Server/bin/include/asio.hpp"
+      - "C:/Program Files/VisualSVN Server/bin/asio.hpp"
+      - "C:/Program Files/cursor/resources/app/bin/include/asio.hpp"
+      - "C:/Program Files/cursor/resources/app/bin/asio.hpp"
+      - "C:/Program Files/Git/cmd/include/asio.hpp"
+      - "C:/Program Files/Git/cmd/asio.hpp"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/include/asio.hpp"
+      - "C:/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit/asio.hpp"
+      - "C:/Program Files/dotnet/include/asio.hpp"
+      - "C:/Program Files/dotnet/asio.hpp"
+      - "C:/Program Files/CMake/bin/include/asio.hpp"
+      - "C:/Program Files/CMake/bin/asio.hpp"
+      - "C:/ProgramData/chocolatey/bin/include/asio.hpp"
+      - "C:/ProgramData/chocolatey/bin/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/include/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/Scripts/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/include/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Python/Python311/asio.hpp"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/include/asio.hpp"
+      - "C:/Users/13/AppData/Local/Microsoft/WindowsApps/asio.hpp"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/include/asio.hpp"
+      - "C:/Program Files/JetBrains/IntelliJ IDEA 2023.3.8/bin/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/include/asio.hpp"
+      - "C:/Users/13/AppData/Local/Programs/Microsoft VS Code/bin/asio.hpp"
+      - "C:/Users/13/.dotnet/tools/include/asio.hpp"
+      - "C:/Users/13/.dotnet/tools/asio.hpp"
+      - "C:/Users/13/Desktop/chat-system/include/asio.hpp"
+      - "C:/Users/13/Desktop/chat-system/asio.hpp"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/include/asio.hpp"
+      - "C:/Program Files/Microsoft Visual Studio/18/Community/VC/Tools/MSVC/14.50.35717/bin/asio.hpp"
+      - "C:/Program Files/include/include/asio.hpp"
+      - "C:/Program Files/include/asio.hpp"
+      - "C:/Program Files/include/asio.hpp"
+      - "C:/Program Files/asio.hpp"
+      - "C:/Program Files (x86)/include/include/asio.hpp"
+      - "C:/Program Files (x86)/include/asio.hpp"
+      - "C:/Program Files (x86)/include/asio.hpp"
+      - "C:/Program Files (x86)/asio.hpp"
+      - "C:/Program Files/CMake/include/include/asio.hpp"
+      - "C:/Program Files/CMake/include/asio.hpp"
+      - "C:/Program Files/CMake/include/asio.hpp"
+      - "C:/Program Files/CMake/asio.hpp"
+      - "C:/Program Files/ChatSystem/include/include/asio.hpp"
+      - "C:/Program Files/ChatSystem/include/asio.hpp"
+      - "C:/Program Files/ChatSystem/include/asio.hpp"
+      - "C:/Program Files/ChatSystem/asio.hpp"
+    found: false
+    search_context:
+      ENV{PATH}:
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\7-Zip"
+        - "C:\\Program Files\\PowerShell\\7"
+        - "c:\\Program Files\\cursor\\resources\\app\\resources\\helpers"
+        - "C:\\Program Files (x86)\\VMware\\VMware Workstation\\bin\\"
+        - "C:\\Windows\\system32"
+        - "C:\\Windows"
+        - "C:\\Windows\\System32\\Wbem"
+        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\"
+        - "C:\\Windows\\System32\\OpenSSH\\"
+        - "C:\\Program Files\\TortoiseSVN\\bin"
+        - "C:\\Program Files (x86)\\NetSarang\\Xshell 8\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\"
+        - "C:\\Program Files\\VisualSVN Server\\bin"
+        - "C:\\Program Files\\cursor\\resources\\app\\bin"
+        - "C:\\Program Files\\Git\\cmd"
+        - "C:\\Program Files (x86)\\Windows Kits\\10\\Windows Performance Toolkit\\"
+        - "C:\\Program Files\\dotnet\\"
+        - "C:\\Program Files\\CMake\\bin"
+        - "C:\\Program Files\\PowerShell\\7\\"
+        - "C:\\ProgramData\\chocolatey\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\\"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Python\\Python311\\"
+        - "C:\\Users\\13\\AppData\\Local\\Microsoft\\WindowsApps"
+        - "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.8\\bin"
+        - "C:\\Users\\13\\AppData\\Local\\Programs\\Microsoft VS Code\\bin"
+        - "C:\\Users\\13\\.dotnet\\tools"
+        - "C:\\Users\\13\\Desktop\\chat-system"
+        - "C:\\Program Files\\Microsoft Visual Studio\\18\\Community\\VC\\Tools\\MSVC\\14.50.35717\\bin"
+      CMAKE_INSTALL_PREFIX: "C:/Program Files/ChatSystem"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "C:/Program Files"
+        - "C:/Program Files (x86)"
+        - "C:/Program Files/CMake"
+        - "C:/Program Files/ChatSystem"
